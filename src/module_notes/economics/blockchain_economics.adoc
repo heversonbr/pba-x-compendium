@@ -1,0 +1,3 @@
+:doctype: book
+:toc:
+:toclevels: 3

@@ -1,0 +1,407 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+
+= Introduction to Game Theory
+
+== Overview
+
+Game theory is the study of strategic interactions between individuals or groups, where the outcome for each participant depends not only on their own choices but also on the choices of others.
+It is used to analyze situations where players (which can be people, companies, countries, etc.) make decisions that are interdependent, using the information that is available to them.
+
+Game theory is often intuitive and practical.
+It is a powerful tool to simplify complex decision-making processi, analyse strategic situations and predict their outcomes.
+
+Game theory has its roots in the 19th century, when French economist Antoine Augustin Cournot, in 1838, introduced a mathematical model of duopoly competition that captured the strategic interdependence of firms.
+His work laid an early foundation by describing how each firm’s optimal decision depends on the actions of its rival—a concept that would later become central to game theory.
+However, the formal birth of the field came in 1928, when John von Neumann published the minimax theorem for zero-sum games, providing the first rigorous mathematical framework for strategic decision-making.
+Von Neumann, alongside Oskar Morgenstern, later expanded these ideas in their 1944 book Theory of Games and Economic Behavior, which systematically applied game theory to economics.
+The discipline was further revolutionized in the 1950s by John Nash, who introduced the concept of Nash Equilibrium, enabling the analysis of non-zero-sum games where cooperation and competition coexist.
+Since then, game theory has evolved into a vital tool across economics, biology, political science, and computer science, shaping modern understanding of strategy, negotiation, and competition.
+
+Nowadays game theory is widely used across many fields beyond its original economic roots.
+In economics, it helps analyze markets, auctions, and pricing strategies.
+In political science, it models voting systems, international negotiations, and conflict resolution.
+Biologists use it to study animal behavior and evolutionary strategies.
+In computer science, game theory is crucial for algorithm design, artificial intelligence, cybersecurity, and network management.
+It also plays a role in psychology, sociology, and even environmental studies, helping to understand cooperation, competition, and decision-making in complex systems.
+Its versatility makes it a key tool for analyzing strategic interactions in almost any discipline.
+
+
+== Game theory and Blockchains
+
+Blockchain operate under adversarial conditions.
+In Blockchains game theory is applied in the design of token policies, collective decision making,
+and specially in the consensus protocol.
+Game theory helps ensure that participants have the right incentive to behave in ways that are beneficial
+to the system as a whole.
+
+Note that, very often in Blockchains the term game theory is overused.
+People may refer to incentives or economic policies as game theory, but
+they are not always backed by true game theorectical analysis.
+It is important to recognize when people use the term formally or loosely.
+
+
+== Key concepts
+
+In essense, game theory is about strategicy interactions.
+Without interaction, there is no game.
+Game theory simplify real-world problems.
+It uses simple models and abstracts away some of the complexity to focus on the core of a strategic situation.
+By simplifying things it can also looses some realism. (for instance, people have motivations that you do not account for while modeling the game).
+
+* *game*: a strategic interaction between players. where certain key elements are common knowledge. 
+* *players*: the decision-makers in the game, we always assume that players are smart and rational
+* *strategy*: the possible action the players can take.
+* *payoffs or utility*: the outcomes or rewards the players receive based on the combination of strategies choosen. Players are utility maximazers.
+
+* types of games:
+** simultaneous (static) vs. Sequential (dynamic): whether players move at the same time or in sequence (e.g., a sealed bid option vs an english auction). 
+** complete vs. incomplete information: whether all players know the rules, utility, and payoff functions to everyone or players know the rules but part of player's game data is private (e.g., chees is an example of complete and poker of incomplete information)
+** symmetryc vs. assymetric: whether all players have the same chances and rewards, or they vary accros players.
+** *Nash equilibriAum*: no player can benefit by changing their strategy if others keep theirs unchange.
+** *perfect vs. imperfect information: In perfect information games, all players know previous actions taken, while in imperfect information games, some actions or information remain hidden.
+** zero-sum vs. non-zero-sum: whether one player’s gain is exactly another’s loss.
+** cooperative vs. non-cooperative: whether players can form binding agreements.
+
+
+Note: The Nash Equilibrium is a general concept where no player can benefit by changing their strategy if others keep theirs unchanged,
+while the Cournot Equilibrium is a specific type of Nash Equilibrium where competing firms choose quantities and none can increase profit by changing output alone.
+
+*References*:
+
+-  https://blockandcapital.com/en/game-theory-impact-on-blockchain-technology/
+
+
+== Game theory in Action
+
+The Prisoner's Dilemma Example
+
+Two suspects, *Alice* and *Bob*, are arrested for a crime. The police don't have enough evidence to convict them unless at least one confesses.
+
+The police separate them and offer each the following deal:
+
+[cols="3,2,2", options="header"]
+|===
+|              | Bob Stays Silent | Bob Betrays Alice
+
+| Alice Stays Silent
+| Both get 1 year in prison
+| Alice gets 3 years, Bob goes free
+
+| Alice Betrays Bob
+| Alice goes free, Bob gets 3 years
+| Both get 2 years in prison
+|===
+
+== Explanation
+
+- *If both stay silent*: They each get 1 year in prison. (Best combined outcome)
+- *If Alice betrays and Bob stays silent*: Alice goes free, Bob gets 3 years.
+- *If Bob betrays and Alice stays silent*: Bob goes free, Alice gets 3 years.
+- *If both betray*: They each get 2 years in prison.
+
+== Key Point
+
+Even though *the best collective outcome is if both stay silent*, the *rational individual choice is to betray* because:
+- Betrayal offers a chance to go free.
+- Betrayal avoids the worst-case scenario of getting 3 years if the other betrays.
+
+This leads to both likely betraying each other, which is worse than mutual silence.
+
+
+
+The dilemma highlights:
+
+- Conflict Between Individual and Collective Interest
+- Trust and Cooperation Are Fragile
+- Short-Term vs. Long-Term Thinking
+- Why Self-Interest Can Harm Groups
+- The Core of Many Real-Life Social Dilemmas: Negotiations, Trade agreements, Political alliances, Teamwork in organizations
+
+
+== Introduction to Nash Equilibrium
+
+A Nash Equilibrium is a set of strategies, one for each player, such that no player can unilaterally improve their outcome by changing their strategy,
+assuming that the other player's strategy remains the same.
+
+In a given game a nash equilibrium is a collection of strategies, one per player, where no one player
+can improve their outcome, by unilatery changing their strategy, assuming the other player's strategy
+ramain the same.
+It is important to note that, having a nash equilibrium does not mean necessarily mean that
+we have the best outcome possible fo all the players.
+
+
+Lets analyse three examples, their Nash equilibrium and potential consequences
+
+
+=== Ultimatum game
+
+Two players: Alice (Proposer) and Bob (Responder).
+
+- Alice is given $10 and must offer a split to Bob (e.g., $7 for Alice, $3 for Bob).
+- Bob can either accept or reject the offer.
+- If Bob accepts → Both get the proposed amounts.
+- If Bob rejects → Both get nothing.
+
+Nash Equilibrium suggests Alice should offer the smallest possible amount (e.g., $1) and Bob should accept because getting something is better than nothing.
+In practice, Bob often rejects offers he perceives as unfair (e.g., offers less than 20-30% of the total).
+People are willing to sacrifice money to punish unfairness.
+
+Key Insight:
+- The Nash Equilibrium predicts minimal offers and acceptance.
+- Human behavior often deviates from the Nash Equilibrium because people value fairness, equity, and emotional satisfaction, not just monetary gain.
+
+	
+=== The Game of Chicken
+
+Two drivers, *Alice* and *Bob*, are speeding toward each other on a collision course.
+
+Each has two choices:
+- *Swerve*: Avoid the crash but be seen as the "chicken" (loser).
+- *Stay*: Risk a head-on collision to "win" if the other swerves.
+
+[cols="3,2,2", options="header"]
+|===
+|              | Bob Swerves | Bob Stays
+
+| Alice Swerves
+| Both are safe but seen as weak (small payoff)
+| Alice is the "chicken" (loses), Bob wins big
+
+| Alice Stays
+| Alice wins big, Bob is the "chicken" (loses)
+| Both crash (worst outcome)
+|===
+
+==== Nash Equilibrium
+
+- There are *two pure strategy Nash Equilibria*:
+  - Alice stays, Bob swerves.
+  - Bob stays, Alice swerves.
+- There is also a *mixed strategy Nash Equilibrium* where each player randomizes between staying and swerving with certain probabilities.
+
+==== Core Point
+
+- Unlike the Prisoner's Dilemma, the worst possible outcome here is mutual defiance (the crash).
+- The Nash Equilibrium shows that **players must avoid mutual disaster**, but there is no stable solution where both players insist on winning.
+- The *Game of Chicken highlights the role of bluffing, risk-taking, and brinkmanship* in competitive situations like:
+  - Political standoffs
+  - Price wars
+  - Dangerous negotiations
+
+==== Real-World Insight
+
+- Even though the Nash Equilibrium suggests one player should eventually yield, real-life players often test each other's willingness to stay,
+leading to dangerous escalation (e.g., Cold War nuclear standoffs).
+
+
+
+=== Coordination Game
+
+A *Coordination Game* is a type of static game where players achieve higher payoffs when they select the same or coordinated actions. 
+The key feature is that players' strategies are *aligned*, leading to mutually beneficial outcomes.
+
+==== Example: Choosing a Meeting Place
+
+Two friends, *Alice* and *Bob*, are trying to meet in a city but cannot communicate.
+
+Each can go to either:
+- *Location A* (Train Station)
+- *Location B* (Cafe)
+
+[cols="3,2,2", options="header"]
+|===
+|              | Bob Chooses A | Bob Chooses B
+
+| Alice Chooses A
+| Both meet (high payoff)
+| They miss each other (low payoff)
+
+| Alice Chooses B
+| They miss each other (low payoff)
+| Both meet (high payoff)
+|===
+
+==== Nash Equilibrium
+
+- *Two pure strategy Nash Equilibria*:
+  - Both choose A.
+  - Both choose B.
+- Both outcomes are stable because *neither player benefits from changing their strategy if the other player’s choice is known*.
+
+==== Core Point
+
+- Coordination Games focus on *alignment* rather than conflict.
+- The players' main challenge is figuring out *how to coordinate*, especially when communication is limited.
+- Real-life examples include:
+  - Agreeing on standards (e.g., using the same software)
+  - Driving conventions (e.g., driving on the right or left side of the road)
+  - Synchronizing technology (e.g., using the same file formats)
+
+==== Real-World Insight
+
+- Sometimes, one equilibrium is *more efficient* (Pareto superior), but without communication, players might settle on less optimal conventions.
+- *Focal points* (natural, obvious choices) often guide coordination when multiple equilibria exist.
+
+
+
+
+== Schelling Points: Quick Explanation
+
+
+A *Schelling Point* (also called a *Focal Point*) is a solution or course of action that people naturally converge on *without prior communication*.
+
+The more people recognize and choose a Schelling Point, the *stronger and more self-reinforcing it becomes*.
+
+*Example*: Where to Meet Without Communication
+
+Two people, *Alice* and *Bob*, must meet in New York City tomorrow but cannot contact each other to coordinate.
+
+Question: *Where should they go?*
+
+- There are countless possible locations, but many people intuitively choose:
+  - *Grand Central Station at noon*.
+
+Grand Central Station becomes the *Schelling Point* because:
+- It is prominent.
+- It is a natural, logical, and culturally significant place to meet.
+
+=== Core Point
+
+- *Schelling Points* are about *natural, psychological coordination*.
+- People rely on shared culture, experience, or logic to predict what others will do in the absence of communication.
+- Schelling Points become stronger as more people successfully coordinate using them.
+- They are especially important in *coordination games with multiple equilibria*.
+
+=== Real-World Examples
+
+- Choosing default meeting spots in cities.
+- Selecting default settings in software.
+- Using the US dollar as the global reserve currency.
+- Conventions in design, like red meaning "stop" and green meaning "go."
+
+=== Game Theory Connection
+
+- In *Coordination Games*, when there are multiple Nash Equilibria, a *Schelling Point* helps players naturally gravitate toward one of them.
+- It solves the coordination problem by acting as a *psychological anchor*.
+
+=== Key Insight
+
+- *Schelling Points require no explicit agreement*.
+- They emerge from *common knowledge, cultural cues, or natural prominence*.
+- The more widely accepted they are, the more powerful they become as coordination solutions.
+
+Schelling point is also referred to as a focal point in Game Theory.
+
+
+== Public goods vs. common goods
+
+*Public Goods* and *Common Goods* are both key concepts in economics, but they differ in terms of access, usage, and sustainability.
+
+=== Public Goods
+
+- *Non-Excludable*: No one can be prevented from using them.
+- *Non-Rivalrous*: One person’s use does not reduce availability for others.
+
+*Examples*
+- National defense
+- Street lighting
+- Public broadcasting
+
+==== Characteristics
+- Provided or regulated by governments because the market may underprovide them.
+- Suffer from the *free-rider problem*: individuals benefit without contributing.
+
+=== Common Goods
+
+- *Non-Excludable*: No one can easily be prevented from using them.
+- *Rivalrous*: One person’s use reduces availability for others.
+
+*Examples*
+- Fisheries
+- Forest resources
+- Public grazing land
+
+==== Characteristics
+- Susceptible to *overuse* (the Tragedy of the Commons).
+- Require management or regulation to prevent depletion.
+
+=== Comparison Table
+
+[cols="3,2,2", options="header"]
+|===
+| Feature | Public Goods | Common Goods
+
+| Excludability
+| Non-Excludable
+| Non-Excludable
+
+| Rivalry
+| Non-Rivalrous
+| Rivalrous
+
+| Key Problem
+| Free-Rider Problem
+| Overuse and Depletion (Tragedy of the Commons)
+
+| Examples
+| Street lighting, national defense
+| Fisheries, forests, public pastures
+|===
+
+=== Core Insights
+
+- *Public Goods* are typically under-provided by the market without collective funding or government intervention.
+- *Common Goods* are typically overused without proper regulation or cooperative management.
+
+=== Related Game Theory Concepts
+
+- Public Goods problems are modeled using *Public Goods Games*, which analyze voluntary contribution and free-riding.
+- Common Goods are often linked to *the Tragedy of the Commons*, which is a multi-player coordination failure where individual incentives lead to group harm.
+
+
+== The tragedy of the commons
+
+The *Tragedy of the Commons* describes a situation where individuals, acting in their own self-interest, overuse and deplete a shared, limited resource, leading to long-term collective loss.
+
+It is a type of *social dilemma* involving *common goods* that are rivalrous and non-excludable.
+
+*Example*: Overfishing
+
+- A community shares a fishery (common resource).
+- Each fisherman wants to catch as many fish as possible to maximize personal gain.
+- If all fishers overfish, the fish population collapses.
+- Result: Everyone suffers due to depleted resource.
+
+=== Core Problem
+
+- Individual incentives drive overconsumption.
+- Lack of effective coordination or regulation leads to resource depletion.
+- The resource is rivalrous (one’s use reduces availability) and non-excludable (difficult to prevent use).
+
+=== Game Theory Perspective
+
+- The Tragedy of the Commons can be modeled as a *multi-player Prisoner’s Dilemma*.
+- The *Nash Equilibrium* often results in everyone overusing the resource, even though everyone would be better off if they cooperated.
+- Cooperation requires trust, communication, or external enforcement (e.g., regulations, quotas).
+
+=== Real-World Examples
+
+- Overgrazing on public pastures.
+- Air and water pollution.
+- Traffic congestion.
+- Overuse of groundwater.
+
+=== Key Insights
+
+- Without collective management or incentives, common resources tend to be overexploited.
+- Solutions include property rights, regulation, or community agreements to sustain the resource.
+
+=== Related Concepts
+
+- Public Goods: Non-rivalrous and non-excludable resources.
+- Common Goods: Rivalrous and non-excludable resources subject to the tragedy.
+- Coordination Games: Potential frameworks for cooperation.
+

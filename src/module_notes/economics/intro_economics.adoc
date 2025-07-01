@@ -1,0 +1,226 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+
+= Introdution to Economics
+
+
+== Crypotography and Economics
+
+We have seen that when we use cryptography along with mathematics and algorithms
+we can have guarantees about the behavior of machines. Even when we use randomness
+we can say that cryptography outputs the specific expected results and these results
+provide a reliable way to secure the digital world.
+
+On the other hand, the goal of almost any system is to interact with humans,
+and when humans are involved things might not work as originally expected.
+
+This is the reason we also need a good understanding of economics.
+For instance, while cryptography might give us a commit-reveal scheme that works flawlessly
+and could be used to run a sealed bid auction, economics explains why someone might choose
+not to reveak their bid to manipulate the outcome.
+
+People are complex and each individual may have their own preferences.
+This is why the science of economics is much more subjective than mathematics and we should be
+aware of its limitations. But we will see that on the agregatte humans often behave in expected ways.
+
+The study of economics equip us with powerful toolbox to understand and predict the people's behavior.
+We can then use this toolbox to understand why a system is designed the way it is or how it could be improved.
+
+Economics along with cryptography will help us build resilient systems on a blockchain.
+Economic concepts are also useful in our personal life. Knowing how human behave, or often how they
+do not behave optimally, can guide us to make better decisions. It can help us all the way from
+playing a game to designing a game, or even to starting a game company.
+
+*Take-away*:
+
+- Cryptography and mathematics offer reliable, predictable guarantees about system behavior.
+- Human behavior is less predictable and can undermine purely technical solutions.
+- Economics helps us understand and anticipate how people actually behave, especially in systems involving incentives and choices.
+- Combining cryptography and economics leads to the design of more secure, resilient, and practical systems, especially on blockchains.
+- Economic insights are also valuable in everyday life, helping us make better decisions in games, system design, and business.
+
+
+In the following we will discuss:
+
+- Incentives: What motivate people to take actions/do things ?
+- Behavioral biases: Where humans do not act as rationally as traditional economic theory predicts.
+- Suply and demand: market equilibrium and elasticity.
+- Different market forms: monopolies, oligopolies an perfect competition.
+- Economics of specialization: focused on comparative advantages and opportunity costs, which shows why specialization benefits everyone.
+
+
+== Can Incentives go wrong ?
+
+=== Incentives
+
+
+[quote, Stephen Levitt]
+----
+An incetive is a bullet, a key, and often tiny object with astonishing power to change the situation.
+----
+
+Incentives motivate both individuals and groups to take specific actions.
+They are used both at society-wide level and at the microeconomic level, such as between individuals.
+Usually people think about financial incentives, but there are non-monetary incentives too.
+
+Note that, a poorly designed incentive can backfire!
+
+Example: *The Cobra Effect Story*
+
+When India was under British rule, there was a significant problem with venomous cobra snakes, particularly in Delhi.
+To reduce the cobra population, the British colonial government implemented a bounty system: they offered a financial reward for every dead cobra that people brought in.
+Initially, the policy seemed to work well as large numbers of dead cobras were turned in.
+However, people quickly realized they could profit from the situation by breeding cobras specifically to kill them and collect the bounty.
+When the government discovered that people were farming cobras, they terminated the program.
+With no incentive to keep the bred cobras, people released them, leading to an even worse cobra infestation than before the policy started.
+
+This is a classic cautionary tale in economics and public policy about unintended consequences and poorly designed incentives.
+The phenomenon is now widely known as the Cobra Effect: when an attempted solution to a problem actually makes the problem worse due to unforeseen behavioral responses to incentives.
+
+Therefore, we need to make suke that incentives and goals are well aligned. 
+If people focues on the incentive they tend to forget the goal behind it. 
+
+
+*Take-away*:
+
+- Incentives shape behavior: People respond to incentives, consciously or unconsciously, adjusting their actions based on the rewards or penalties offered.
+- Types of incentives matter: Incentives can be financial, social, moral, or coercive. Not all are about money.
+- Poorly designed incentives can backfire: If an incentive is not carefully planned, it can encourage people to game the system or focus on the reward instead of the actual goal.
+- The Cobra Effectw: When incentives are misaligned, the solution can make the problem worse.
+- Incentives should align with goals: Always design incentives that truly promote the desired outcome, not just surface-level metrics.
+- People follow the incentive, not the intention: If the reward system is clear, people will often pursue it even if it means ignoring the bigger purpose.
+- Unintended consequences are common: When designing incentives, it is essential to predict possible side effects or alternative behaviors that could emerge.
+- Review and adjust: Effective incentive systems should be monitored regularly to ensure they continue to work as intended.
+
+
+== Rationality and Biases
+
+One important concept we need to observe is rationality.
+Traditional economics assumes that the aggregate behavior of a collective can be understood by the decisions of individual actos, where
+each actor is looking for maximazing their own monetary gains and people make rational decisions with the information and choices given to them.
+We will use this framework, or approach in our discussion as a start point, but we should be aware of its limitations, as a rationality assumption
+does not always predict reality accurately. People are not always driven by monetary incentives alone.
+They are also motivated by social norms, personal beliefs and even fairness, and these aspects are more difficult to model.
+
+// add an example here ?
+
+Another important concept is the cognitive biases: people  are risk averse and feel/fear losses more strongly that they feel/fear gains.
+
+*Example*:
+
+Imagine someone offers you two options:
+- Option A: Receive $50 for sure.
+- Option B: Flip a fair coin; if it lands on heads, you get $100, if tails, you get nothing.
+
+What most people do:
+
+- Most people pick Option A — the guaranteed $50 — even though the expected value of Option B is also $50 (0.5 × $100 + 0.5 × $0 = $50).
+
+This is part fo prospect theory, Daniel Kahneman (behavioral economist) - Nobel Prize 2002.
+
+Another finding in propect theory is that: the sensitivity to changes in losses or gains decreases with the amount.
+Example: paying 20 dolars to deliver a mouse that costs 10 dolars is not acceptable, while paying 20 dolars to deliver your new 2000-dolar computer at home is acceptable.
+
+Another concept is confirmation bias, which is our tendency to seek information that confirms what we are really believing,
+even though there may be equally valid evidence to the opposite point of view. The default effect is people's tendency to stick with
+pre-selected choices.
+
+So, incentives and punishments can be tricky, we have to design incentives thoughtfully and stand in the shoes of the user.
+This is specially important in blockchain systems where we rely heavily on behavior. 
+
+
+*Take-Away*: Key Points on Rationality and Cognitive Biases
+
+- Traditional economics assumes rationality: People are expected to make decisions that maximize their own monetary gains using available information.
+- Reality is more complex: People are not purely driven by money — they also care about fairness, social norms, personal beliefs, and emotional factors.
+- Cognitive biases shape decisions: People are often risk averse, preferring guaranteed outcomes over fair gambles, even when the expected values are the same.
+- People feel losses more intensely than they value equivalent gains (loss aversion).
+- The psychological impact of gains or losses decreases as the amounts increase (diminishing sensitivity).
+- Confirmation Bias: People seek out information that supports what they already believe.
+- Default Effect: People tend to stick with pre-selected or default options.
+- Design matters: Incentives and penalties must account for human behavior and cognitive biases.
+This is especially critical in blockchain systems, where behavioral incentives are central to system security and participation.
+
+
+
+== Supply and demand
+
+Supply and demand are fundamental pilars of market equilibrium.
+Generally, when price go up, demand falls, that's called the law of demand.
+Or in other words, the quantity of a product demanded by the society decreases with price and
+remains constant for a fixed price. The same is true for most good and services.
+However, there are some exceptions such as luxury goods, like expensive watches, where a higher price can
+actually increase the demand. But for most goods higher prices mean less buying.
+
+Supply work on the opposite way. As prices increase, suppliers are willing to produce more of the goods.
+That's the law of supply.
+
+As a new product enters the market, the laws of supply and demand engage, and they will make the price
+naturally converge to a value where the quantity demanded equals the quantity supplied.
+This is called the equilibrium price.
+
+One interesting concept linked to supply and demand is the elasticity, which measures how sensitive
+buyers an sellers are to price changes. High elasticity means even small price changes can significantly
+impact the quantity demanded or supplied.  Low elasticity is the opposite, even if the prices varies
+significantly the demand or supply is not affected.
+An axemple of low elasticity are basic necessities goods like water, salt or gasoline,
+even if the price goes up, people still need to pay for it.
+
+
+*Take-Away*: Key Points on Supply and Demand
+
+- Supply and demand are core to market behavior: They determine prices and quantities in a market.
+- Law of Demand: When prices rise, demand typically falls. Higher prices usually lead to less buying.
+- Law of Supply: As prices rise, suppliers are motivated to produce and sell more.
+- Market equilibrium: Prices naturally adjust to a point where the quantity demanded equals the quantity supplied — this is called the equilibrium price.
+- Exceptions exist: Some goods, like luxury items (e.g. expensive watches), can defy the law of demand because higher prices may increase their appeal.
+- Elasticity matters: It measures how sensitive buyers and sellers are to price changes.
+- High elasticity: Small price changes cause large shifts in demand or supply (e.g., smartphone accessories).
+- Low elasticity: Demand or supply stays stable even with significant price changes (e.g. gasoline, water, salt).
+- Key insight: Understanding elasticity helps predict how markets will react to pricing strategies, taxes, or supply shocks.
+
+== Market structures and strategies
+
+- Perfect competition: the ideal situation where there are a lot of buyers of a product and a lot of firms selling it, with no single producers providing
+to a large portion of the total supply. No single party can exert a large control over either the supply or the demand.
+
+- Oligopoly: a marker with only few firms/providers. rather than competing on price, they tend to specialize their products to different market segments.
+
+- Monopoly: a single firm controls all the available suplly of a product in the market. i
+In this case, the price is not set as a function of the cost of production but instead, it is
+set in terms of what buyers are willing to pay for it.
+This model can be acceptable for elastic luxury good, but exploitative when applied to inelastic basic necessities.
+That's the reason there are often laws to prevent abuses.
+
+One of the most important economic concepts is the comparative advantage.
+This concept explains why even if a person is capable of being self-sufficient and producing
+all the goods they need, they are still better of specializing in a few products and trading them in the market.
+Hence, taking that into account in a society of specialist, if people focus on their
+comparative advantage, everyone will be wealthier than in a society without trading.
+This principle can be applied to country-level specialization on a global scale.
+
+*Take-Away*: Key Points on Market Types and Economic Strategies
+
+* Perfect Competition:
+** Many buyers and many sellers.
+** No single firm or buyer can control prices or the market.
+** Example: Agricultural markets like wheat or corn.
+*  Oligopoly:
+** A few firms dominate the market.
+** Firms tend to differentiate products rather than compete purely on price.
+** Example: Smartphone manufacturers or airline companies.
+* Monopoly:
+** One firm controls the entire supply of a product.
+** The firm sets prices based on what consumers are willing to pay, not on production cost.
+** Monopolies can be acceptable for luxury goods (elastic demand) but are dangerous for essential goods (inelastic demand), which is why anti-monopoly regulations exist.
+** Example: Utility companies or patent-protected drugs.
+* Comparative Advantage:
+** Specialization increases efficiency and overall wealth, even when one party could theoretically do everything themselves.
+** Trading based on comparative advantage leads to mutual benefits.
+** This applies at both individual and country levels.
+
+
+*Final Note*:
+Understanding incentives and core economic principles is essential for designing better systems—whether they involve human-to-human interactions or automated processes.
