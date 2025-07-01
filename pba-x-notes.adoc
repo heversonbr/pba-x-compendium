@@ -5,3 +5,4 @@
 = PBA-x Module Notes
 
 include::module_notes/introduction_cryptography.adoc[]
+include::module_notes/economics_game_theory.adoc[]
