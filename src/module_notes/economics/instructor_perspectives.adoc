@@ -1,0 +1,80 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+= Instructor Perspectives - Economics
+
+== Traditional vs Behavioral Economics
+
+- What are your favorite economic concepts that play  a role in our day-to-day lives ?
+
+Combining psycology with economics, behavioral aspects of economy that is appliable in our real-world problems.
+
+
+== Web3 Developers and Economics Knowledge
+
+- What is it important for someone who is building blockchains to learn economics ?
+
+When we design blockchains we should try make it permissionless and open to everyone.
+And there you dont have access to many of the social mechanisms to enforce certain behavior.
+So you dont often know who are the actors, and then you need to drive their behaviors with economic incentives.
+You can both understand economics and then learn about the protocols that are out there or you can learn economics
+and actually design various mechanisms and protocols.
+Knowing about economics can bring you benefits on both sides, whether you are an active developer or you are just part of the system.
+
+
+== Schelling Points and Predictability of Choices
+
+Shelling points is interesting because it introduces again psycology to the mix.
+The schelling point is recognized by many humans that is a nice outcome or a nice choice to solve a situation without communication among the elements.
+
+
+== Tragedy is the tradegy of the commons and how it impacts the design of public blockchains ?
+
+The Tragedy of the Commons is a concept that describes situations where individuals, acting in their own self-interest,
+overuse and deplete a shared, limited resource, ultimately causing long-term harm to the entire group.
+This typically applies to common goods—resources that are rivalrous (one person’s use reduces availability for others)
+and non-excludable (it’s hard to prevent anyone from using them).
+
+*Real-World Example*:
+
+We see this in everyday life. Imagine public goods like clean air, public parks, or open-source software.
+Everyone benefits from them, but contributing to their maintenance or creation often requires time, effort, or money.
+Ideally, everyone would contribute to keep these resources available and valuable.
+However, individuals tend to act in their own self-interest, thinking:
+
+ “If I save my resources and let others contribute, I can still benefit without paying the cost.”
+
+This behavior is known as free-riding—enjoying the benefits of a resource without contributing to its upkeep.
+If too many people act this way, the resource is neglected or depleted because there aren’t enough contributors to sustain it.
+
+
+*Impact on Public Blockchains*
+
+Public blockchains, like other decentralized systems, face similar challenges.
+They are open, permissionless networks where anyone can participate and benefit, but their sustainability often
+relies on voluntary contributions: developers building infrastructure, validators securing the network, and participants funding ecosystem growth.
+
+If everyone tries to free-ride—benefiting from the blockchain without contributing to its security, development,
+or governance—the system could stagnate or even collapse. In decentralized environments, there’s no central authority
+to force people to contribute, so protocol-level solutions are needed to address this problem.
+
+
+*Blockchain Solution: Polkadot’s Treasury Example*
+
+Blockchains can program incentive structures into their protocols to mitigate the Tragedy of the Commons. A great example is Polkadot’s Treasury system.
+
+- In Polkadot, a portion of the network’s inflation (newly minted tokens) automatically flows into the Treasury.
+- This Treasury is then used to fund projects that provide value to the entire ecosystem, such as infrastructure, community tools, or educational initiatives.
+- These are typically public goods that would otherwise suffer from the Tragedy of the Commons because individual participants might not want to pay for them directly, even though everyone benefits from their existence.
+
+By embedding funding mechanisms at the protocol level, blockchains like Polkadot create sustainable systems where public
+goods can continue to be developed and maintained, even in the face of individual self-interest.
+
+
+Summary
+
+The Tragedy of the Commons is a key consideration in the design of public blockchains.
+Without proper incentives, these systems risk underfunding essential public goods.
+By building mechanisms like on-chain treasuries and inflation-funded grants directly into the protocol,
+blockchains can ensure continuous growth and resilience, even when individual participants might prefer to free-ride. 
