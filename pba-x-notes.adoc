@@ -1,8 +1,9 @@
 :doctype: book
 :toc:
-:toclevels: 4
+:toclevels: 3
 
-= PBA-x Module Notes
+= PBA-x Wave 3: Modules Notes
 
-include::module_notes/introduction_cryptography.adoc[]
-include::module_notes/economics_game_theory.adoc[]
+include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
+include::module_notes/economics_game_theory.adoc[leveloffset=+1]
+include::module_notes/fundamentals_blockchains.adoc[leveloffset=+1]

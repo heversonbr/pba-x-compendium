@@ -4,7 +4,7 @@
 
 
 
-= Part 3: Accounts and keys
+= Accounts and Keys
 
-include::intro_crypto_accounts.adoc[]
-include::intro_crypto_keys.adoc[]
+include::intro_crypto_accounts.adoc[leveloffset=+1]
+include::intro_crypto_keys.adoc[leveloffset=+1]

@@ -2,7 +2,7 @@
 :toc:
 :toclevels: 3
 
-= Part 2: Hashing and Encryption
+= Hashing and Encryption
 
 == Hash functions:
 
