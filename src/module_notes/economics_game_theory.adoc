@@ -1,0 +1,12 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+= Module: Economics and Game Theory for Blockchain
+
+
+include::economics/intro_economics.adoc[leveloffset=+1]
+include::economics/intro_grame_theory.adoc[leveloffset=+1]
+include::economics/price_finding.adoc[leveloffset=+1]
+include::economics/blockchain_economics.adoc[leveloffset=+1]
+include::economics/instructor_perspectives.adoc[leveloffset=+1]

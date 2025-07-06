@@ -29,7 +29,9 @@ Shelling points is interesting because it introduces again psycology to the mix.
 The schelling point is recognized by many humans that is a nice outcome or a nice choice to solve a situation without communication among the elements.
 
 
-== Tragedy is the tradegy of the commons and how it impacts the design of public blockchains ?
+== Tragedy of the Commons
+
+*How it impacts the design of public blockchains?*
 
 The Tragedy of the Commons is a concept that describes situations where individuals, acting in their own self-interest,
 overuse and deplete a shared, limited resource, ultimately causing long-term harm to the entire group.
