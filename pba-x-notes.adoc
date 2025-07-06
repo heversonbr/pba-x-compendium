@@ -5,5 +5,7 @@
 = PBA-x Wave 3: Modules Notes
 
 include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
+
 include::module_notes/economics_game_theory.adoc[leveloffset=+1]
+
 include::module_notes/fundamentals_blockchains.adoc[leveloffset=+1]
