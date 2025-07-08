@@ -342,7 +342,7 @@ Then, we can select add a multi sig account and select the addresses for this ac
 We set the threashold, and the name for the group.
 The example shows the use of the multi-sig using Passeo testnet , to simulate the use to sending some assets with a multi-sig account.
 
-== References:
+== References
 
 - https://wiki.polkadot.network/learn/learn-cryptography/
 - https://en.wikipedia.org/wiki/Digital_signature
