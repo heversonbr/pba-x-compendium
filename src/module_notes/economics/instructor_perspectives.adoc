@@ -74,7 +74,7 @@ By embedding funding mechanisms at the protocol level, blockchains like Polkadot
 goods can continue to be developed and maintained, even in the face of individual self-interest.
 
 
-Summary
+== Summary
 
 The Tragedy of the Commons is a key consideration in the design of public blockchains.
 Without proper incentives, these systems risk underfunding essential public goods.
