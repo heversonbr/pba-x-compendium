@@ -62,7 +62,7 @@ Weak collision resistance, which is also called second preimage resistance.
 Strong collision resistance, is also known as Collision resistence.
 
 
-*Summary*:
+=== Summary
 
 [cols="1,3,3", options="header"]
 |===
@@ -378,7 +378,7 @@ Note:
 - In practice, both methods are often combined for secure and efficient communication.
 
 
-- References
+== References
 
 - https://en.wikipedia.org/wiki/Public-key_cryptography
 - https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
