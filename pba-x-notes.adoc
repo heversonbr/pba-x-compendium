@@ -18,5 +18,3 @@ include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
 // include::module_notes/polkadot_sdk.adoc[leveloffset=+1]
 
 // include::module_notes/protocol_overview.adoc[leveloffset=+1]
-
-*WIP*
