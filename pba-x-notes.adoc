@@ -1,13 +1,12 @@
-= PBA-x 3rd Wave Compendium: 
+= PBA-x Compendium
 :doctype: book
 :toc:
 :toclevels: 3
 
 == Introduction
 
-This document contains comprehensive notes from the third wave of PBA-x, the online version of the Polkadot Blockchain Academy (PBA) program. 
+This document contains comprehensive notes from the *3rd wave* of the online version of the *Polkadot Blockchain Academy* (*PBA-x*) program. 
 The primary objective is to transform raw notes from video lessons into well-structured, readable content that serves as a definitive reference guide for learners to refer to and review course material.
-
 
 
 include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
