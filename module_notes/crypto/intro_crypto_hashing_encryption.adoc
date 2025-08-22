@@ -23,7 +23,9 @@ SHA-256 is a widely used hash function that belongs to the SHA-2 (Secure Hash Al
 SHA-2 is a collection of cryptographic hash functions designed for secure data hashing.
 
 To see SHA-256 in action, we will use a visual demo available online.
-The demo is hosted at https://guggero.github.io/blockchain-demo/#!/hash.
+The demo is hosted at:
+
+ https://guggero.github.io/blockchain-demo/#!/hash
 
 It is an interactive tool that helps you understand how hash functions behave with different inputs.
 This version is a complete rewrite of Anders Brownworth's original Blockchain Demo.
@@ -35,7 +37,7 @@ This property is known as the avalanche effect.
 It demonstrates how hash functions are sensitive to input and useful for ensuring data integrity.
 
 
-=== Properties of Hash Funtions:
+=== Properties of Hash Funtions
 
 * accept unbounded size input
 * map to a bounded fixed size output
@@ -62,7 +64,7 @@ Weak collision resistance, which is also called second preimage resistance.
 Strong collision resistance, is also known as Collision resistence.
 
 
-=== Summary
+==== Quick summary
 
 [cols="1,3,3", options="header"]
 |===
@@ -83,9 +85,8 @@ Strong collision resistance, is also known as Collision resistence.
 
 
 
-== Hash Functions: Cryptographic vs Non-cryptographic
+=== Cryptographic vs Non-cryptographic Hash functions
 
-There are 2 types:
 
 - *Cryptographic hash functions*:
   provide security guarantess and are supposed to be collision resistent
@@ -123,8 +124,7 @@ So, Collision resistance does not mean no collisions exist.
 If collisions become easy to find (like SHA-1 today), the hash function is considered broken for cryptographic use and should be replaced by stronger functions (SHA-256, SHA-3, etc.).
 
 
-== Hash Function: Applications
-
+=== Hash Function: Applications
 
 Hash functions also provide data integrity.
 Even a single bit change in the input causes a completely different hash output.
@@ -206,7 +206,7 @@ Commitment schemes built from hash functions are simple but powerful.
 They are used in many cryptographic protocols to ensure fairness and privacy.
 
 
-==== Real-World Use Cases
+=== Real-World Use Cases
 
 Commitment schemes are used in many real-world cryptographic systems.
 
@@ -230,28 +230,6 @@ Commitment schemes are used in many real-world cryptographic systems.
 These use cases show how commitments provide both privacy and trust.
 
 
-== Real-World Use Cases
-
-Commitment schemes are used in many real-world cryptographic systems.
-
-- **Secure Auctions:**  
-  Bidders commit to their bids in secret.  
-  Later, they reveal the bids.  
-  This prevents cheating or changing bids after seeing others.
-
-- **Zero-Knowledge Proofs:**  
-  Commitments hide secret values.  
-  You can prove something is true without showing the secret itself.
-
-- **Blockchain:**  
-  Commitments are used to record transactions or states.  
-  Once committed, the data cannot be changed without detection.
-
-- **Digital Contracts:**  
-  Parties can commit to contract terms before revealing them.  
-  This adds fairness and prevents manipulation.
-
-These use cases show how commitments provide both privacy and trust.
 
 
 
@@ -273,15 +251,16 @@ Examples: ChaCha20, AES, DES, Blowfish, Twofish, Serpent
 
 ==== Guarantees
 
-**Provides:**  
+[options="header",cols="2"]
+|===
+| Provides | Does NOT provide
 
-- Confidentiality (keeps data secret)
+| Confidentiality (keeps data secret) | Integrity (detecting tampering)
 
-**Does NOT provide:**  
+| | Authenticity (proving who sent the message)
 
-- Integrity (detecting tampering)  
-- Authenticity (proving who sent the message)  
-- Non-repudiation (preventing denial of sending)
+| | Non-repudiation (preventing denial of sending)
+|===
 
 === Asymmetric Encryption
 
@@ -304,27 +283,28 @@ Examples: RSA, ElGamal, Paillier
 
 ==== Guarantees
 
-**Provides:**  
+[options="header",cols="2"]
+|===
+| Provides | Does NOT provide
 
-- Confidentiality (same as symmetric)
+| Confidentiality (same as symmetric) | Integrity
 
-**Does NOT provide:**  
+| | Authenticity
 
-- Integrity  
-- Authenticity  
-- Non-repudiation
+| | Non-repudiation
+|===
 
 
 == Assymetric Encryption: Explained Example
 
 Two breakthrough algorithms that allow secure communication between two parties without a shared secret:
 
-- RSA algorithm (1977): Relies on number theory, specially in prime numbers and the difficulty of prime number factorization.
+- *RSA algorithm* (1977): Relies on number theory, specially in prime numbers and the difficulty of prime number factorization.
   It provides a public/private key pair which are really long numbers.
   Then if two parties want to communicate securely the first sends it public key to the other. Upon receipt the public key it uses the public key
   to encrypt the message, which that  only the owner of the public key can read the message.  And this is what we call assymetric cryptography and this is computationally expansive.
 
-- Diffie-Hellman key exchange algorithm (1976/77):
+- *Diffie-Hellman key exchange algorithm* (1976/77):
 it is a mathematical method of securely generating a symmetric cryptographic key over a public channel and was one of the first protocols as conceived by Ralph Merkle and named after Whitfield Diffie and Martin Hellman.
 
 Let's see an example:
@@ -359,7 +339,7 @@ For instance, p = 23, g = 5
 Now both share the same secret S, without having sent it directly.
 
 
-Note:
+*Note*:
 
 - The shared key is never sent, only derived.
 - DH by itself provides key agreement, not encryption or authentication.
@@ -378,7 +358,7 @@ Note:
 - In practice, both methods are often combined for secure and efficient communication.
 
 
-== References
+== Read more
 
 - https://en.wikipedia.org/wiki/Public-key_cryptography
 - https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange

@@ -4,6 +4,8 @@
 
 = Hash based Data Structures
 
+:todo: finish the description of topics
+NOTE: TBD: work in progress, list of items to cover
 
 == Data Structures for beginers
 
@@ -76,14 +78,14 @@ hashes only allow to reference previous data, never future data
 
 
 
-== Summary / Take-away
+== Take-away
 
-- provie a summary take-away
-
-
+- provide a summary/take-away
 
 
-== References
+
+
+== Read more
 
 - https://medium.com/@DevChy/introduction-to-data-structures-with-real-world-examples-15063e4adbad
 

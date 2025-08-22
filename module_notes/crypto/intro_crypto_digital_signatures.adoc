@@ -33,7 +33,7 @@ Other properties of signatures:
 ** The purpose is to verify authenticity, not to conceal content.
 
 
-== Digital signatures in Practice
+== Digital Signatures in Practice
 
 As just mentioned, in practice only the hash of a message is required to sign the message and verify the signature.
 One challenge that signatures must address are replay attacks.
@@ -59,13 +59,10 @@ For instance, we can bind signatures to specific sessions, so they cannot be reu
 
 == Digital Signatures in Action
 
-This section shows a video of showing a transaction being sent from user A to B,
-the highlight of this example is to show the incremental nonce added to the transaction by the wallet
-as well as the timestamp that defined the lifetime that is added by the call.
-Both are measure of preventing replay attacks.
+This section just shows a video of presenting a transaction being sent from user A to B, the highlight of this example is to show the incremental nonce added to the transaction by the wallet as well as the timestamp that defined the lifetime that is added by the call. Both are measure of preventing replay attacks.
 
 
-== Digital Signatures - Elliptic curves
+== Digital Signatures: Elliptic curves
 
 There are several algorithms used to create digital signatures, each one with its strengths and use cases.
 Some of the most prominent include:
@@ -79,7 +76,7 @@ Efficiency: ECDSA offers strong security with smaller key sizes compared to RSA,
 Non-Deterministic: ECDSA relies on generating a random nonce for each signature; if the nonce is reused or predictable, it can compromise the private key.
 Usage: Common in Bitcoin, Ethereum, TLS, and many cryptographic protocols.
 
-Limitations of ECDSA:
+*Limitations of ECDSA*:
 
 * Nonce Sensitivity:
 ** Biggest Weakness: ECDSA critically depends on using a unique, high-quality random nonce (per signature).
@@ -342,7 +339,7 @@ Then, we can select add a multi sig account and select the addresses for this ac
 We set the threashold, and the name for the group.
 The example shows the use of the multi-sig using Passeo testnet , to simulate the use to sending some assets with a multi-sig account.
 
-== References
+== Read More
 
 - https://wiki.polkadot.network/learn/learn-cryptography/
 - https://en.wikipedia.org/wiki/Digital_signature

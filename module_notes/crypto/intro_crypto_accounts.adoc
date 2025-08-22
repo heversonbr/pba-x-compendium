@@ -5,11 +5,13 @@
 
 = Wallets and Accounts
 
+== Introduction
+
 A wallet stores the cryptographic keys needed to access and manage digital assets on the blockchain.
 It doesn't actually hold the cryptocurrency itself, but instead facilitates the secure storage and management of the keys required to carry out transactions.
 They are known to be complicated even for technical people.
 
-= Accounts and Self Custody
+== Accounts and Self Custody
 
 Creating a blockchain account is a simple process, we just need to have a crypto wallet.
 

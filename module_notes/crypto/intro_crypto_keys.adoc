@@ -3,7 +3,10 @@
 :toclevels: 3
 
 
-== Cryptographic keys - Encoding
+= Cryptographic keys
+
+
+== Encoding
 
 Computers work using binary data (long strings of 0s and 1s).
 But these raw binary strings are very hard for humans to read, write, or share without making mistakes.
@@ -44,7 +47,7 @@ Why Encoding Matters
 - Data integrity: Encoded strings can still be verified cryptographically even if they are human-friendly.
 
 
-== Cryptographic keys - Mnemonics
+==  Mnemonics
 
 The BIP-39 standard is a mnemonic system specifically designed for creating and recovering cryptographic keys in a human-readable way.
 A mnemonic system helps people remember or record complex information more easily.
@@ -62,7 +65,7 @@ abandon ability able about above absent absorb abstract absurd abuse access acci
 Substrate uses the dictionary of the `BIP39` standard.
 
 
-== Cryptographic keys - Address Format
+== Address Format
 
 In the context of cryptography, an address is essentially a public key.
 In cryptocurrencies when talk about keys, usually we are talking about an address.
@@ -140,7 +143,7 @@ There are two types of key derivation: Hard and Soft keys deivation.
 - Multi-Signature Wallets (Partially Hardened): Wallets where multiple parties must sign transactions, ensure that shared public keys don’t leak sensitive structure or parent keys.
 
 
-== Activity: practical example of hard and soft key derivation 
+== Activity: A practical example of hard and soft key derivation 
 
 An example and activity, we use Polkadot JS Extension as it provides ability to create and derive accounts using a mnemonic phrase.
 Note: https://polkadot.js.org/extension/[Polkadot JS Extension] is for developers only. 
