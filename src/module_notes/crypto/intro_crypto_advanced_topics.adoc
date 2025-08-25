@@ -185,7 +185,7 @@ A Ring VRF lets a participant generate a VRF output that is provably valid but a
 - Useful in privacy-preserving protocols, anonymous lotteries, or leader selection.
 
 
-=== VRFs Take-away:
+=== Takeaways
 
 - *Fairness* comes from agreed input. No central dealer needed.
 - *Randomness* comes from VRF evaluation. The combination of public input + secret key.

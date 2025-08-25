@@ -4,85 +4,158 @@
 
 = Hash based Data Structures
 
-:todo: finish the description of topics
-NOTE: TBD: work in progress, list of items to cover
-
 == Data Structures for beginers
 
-- What are data structures
+Data structures are organized ways of storing and accessing data in computer memory. They define how data elements relate to each other and what operations can be performed efficiently. The choice of data structure significantly impacts the performance characteristics of algorithms and applications.
 
+=== Common Data Structures
 
-Discuss few of them:
+Arrays:: Sequential collections of elements stored in contiguous memory locations. Arrays provide constant-time access to elements by index but have fixed size and expensive insertion/deletion operations in the middle.
 
-- Arrays
-- LinkedLists
-- Trees
--- max heap
--- binary search tree 
+Linked Lists:: Dynamic collections where elements (nodes) contain data and references (pointers) to the next node. Linked lists allow efficient insertion and deletion but require sequential traversal to access specific elements.
 
-each data structure has its own advatages and cons, depending on the use case.
-we will see later that blockchains benifit from organizing data in a specific structure 
+Trees:: Hierarchical structures with nodes connected in parent-child relationships. Trees provide efficient searching, insertion, and deletion operations.
+
+Max Heap:: 
+A binary tree where each parent node has a value greater than or equal to its children. Max heaps efficiently maintain the maximum element at the root and support priority queue operations.
+
+Binary Search Tree:: 
+A binary tree where left children are smaller than their parent and right children are larger. Binary search trees enable efficient searching, insertion, and deletion with average `O(log n)` complexity.
+Each data structure offers distinct advantages and trade-offs depending on the use case. 
+Blockchains benefit from organizing data in specific structures that leverage cryptographic hashing for security and integrity guarantees.
 
 
 == Hash Chains
 
-- hash based data structures (breafly compare with pointers if it is a good thing)
+Hash-based data structures use cryptographic hash functions instead of traditional memory pointers to link data elements. Unlike memory pointers that can reference any location, hash-based links have unique properties that make them particularly valuable for distributed systems.
 
-key feature:  one-way functions
-we cant have cyclic structures with hashes
-hashes only allow to reference previous data, never future data
+=== Key Features
+
+One-way functions:: Hash functions are computationally infeasible to reverse, meaning you cannot determine the input from the hash output alone.
+Immutable references:: Once a hash is computed, it creates a permanent, tamper-evident link to specific data.
+No cyclic structures:: Hash chains inherently prevent circular references since hashes can only reference previously computed data, never future data that doesn't yet exist.
 
 - hash chains , explain it and its features 
 
+=== Hash Chains Explained
+A hash chain is a sequence of data blocks where each block contains:
+
+- The actual data payload
+- The hash of the previous block
+
+This creates an immutable sequence where:
+
+- Each block is cryptographically linked to its predecessor
+- Any modification to a previous block invalidates all subsequent hashes
+- The chain provides tamper-evident ordering of data
+
+Hash chains form the backbone of blockchain technology, ensuring data integrity and creating an auditable history of transactions.
 
 
 == Merkle Trees
 
-- another key data structure in the context of block chains
-- explain: binary tree where the value of each parent node is the hash of the child
+Merkle trees represent another fundamental hash-based data structure crucial for blockchain systems. A Merkle tree is a binary tree where the value of each parent node equals the hash of its child nodes concatenated together.
 
-- allows to prove the information  about the tree without reveal the entire dataset
+=== Structure and Properties
 
-- allow to commit to the entire the entire dataset , by using the root hash
- we cannot change anu part of the tree without changing the root
-- explain why it is benificial for blockchains
+In a Merkle tree:
 
+- Leaf nodes contain the actual data (or hashes of data)
+- Internal nodes store the hash of their children's values
+- The root node represents the hash of the entire dataset
 
+=== Key Benefits
 
+Efficient integrity proofs:: Merkle trees allow proving that specific data exists in the dataset without revealing the entire dataset. This is accomplished through Merkle proofs that provide only the necessary hash values along the path from leaf to root.
+Tamper detection:: The root hash serves as a commitment to the entire dataset. Any modification to any leaf changes the root hash, making tampering immediately detectable.
+Blockchain advantages:: In blockchain contexts, Merkle trees enable:
 
-
-=== Merkle Example
-
-
-- give an example of how to built a merkle tree and how to prove / verify values with it
-
-
-
-
-== Efficient data structures
+- Efficient transaction verification without downloading entire blocks
+- Scalable proof systems for large transaction sets
+- Compact block headers that commit to all transactions
 
 
-- briefly explain key value data bases
+=== Merkle tree example
 
-- explain a trie
+Consider building a Merkle tree for transactions [A, B, C, D]:
 
-- radix trie
+----
+        Root Hash
+      /          \
+   H(AB)        H(CD)
+   /    \      /     \
+  H(A)  H(B)  H(C)  H(D)
+   |     |     |     |
+   A     B     C     D  
+----
 
-- patricia tries
+To prove transaction B exists:
 
-- explain MMR Merkle mountain range
+. Provide H(A), H(CD), and the root hash
+. Verifier computes H(H(A) || H(B)) = H(AB)
+. Verifier computes H(H(AB) || H(CD)) = Root Hash
+. If the computed root matches the known root, B is proven to exist
 
--- also explain how to build and prove/verify
--- mention advantatges regarding to traditional merkle trees.
-
-
-
-
-== Take-away
-
-- provide a summary/take-away
+This proof requires only 3 hash values instead of the full dataset.
 
 
+== Efficient Data Structures
+
+=== Key-Value Databases
+Key-value databases store data as pairs of unique keys and their corresponding values. They provide efficient lookups, insertions, and deletions based on keys, making them ideal for scenarios requiring fast data retrieval by identifier.
+
+=== Trie (Prefix Tree)
+A trie is a tree structure where each path from root to leaf represents a string, with each node representing a character. Tries excel at prefix-based searches and string operations, commonly used in autocomplete systems and dictionaries.
+
+=== Radix Trie
+Radix tries optimize standard tries by compressing chains of single-child nodes into single edges labeled with multiple characters. This compression reduces memory usage and improves performance for sparse datasets.
+
+=== Patricia Tries
+Patricia (Practical Algorithm to Retrieve Information Coded in Alphanumeric) tries further optimize radix tries by using binary representations and bit-level operations. They provide efficient storage and retrieval for large key spaces.
+
+=== Merkle Mountain Range (MMR)
+MMR is an append-only data structure that combines properties of Merkle trees with efficient insertion capabilities.
+
+==== Structure and Operation
+MMRs maintain a forest of perfect binary trees of different heights:
+
+- New elements are always appended to the right
+- Trees of the same height are combined into larger trees
+- The structure resembles a mountain range when visualized
+
+==== Building and Proving in MMRs
+
+*Building*: When inserting element N:
+
+. Add the new element as a leaf
+. If there's a tree of the same height to the left, merge them
+. Continue merging until no more merges are possible
+
+*Proving*: To prove an element exists:
+
+. Provide the element's position and value
+. Include sibling hashes along the path to each peak
+. Include all peak hashes to reconstruct the root
+
+==== Advantages over Traditional Merkle Trees
+
+- *Append efficiency*: New elements added in `O(log n)` time without rebuilding
+- *Proof stability*: Existing proofs remain valid when new elements are added
+- *Storage efficiency*: No need to store the entire tree structure
+- *Incremental updates*: Supports efficient streaming updates
+
+MMRs are particularly valuable for blockchain systems requiring continuous data append operations while maintaining efficient proof capabilities.
+
+== Takeaways
+
+Hash-based data structures provide the cryptographic foundation for secure, distributed systems like blockchains:
+
+Security through immutability:: Hash-based linking creates tamper-evident data structures where any modification is immediately detectable through hash verification.
+Efficiency without trust:: These structures enable efficient data verification and integrity checking without requiring trust in centralized authorities.
+Scalable proof systems:: Merkle trees and MMRs allow compact proofs of data inclusion, enabling verification of large datasets with minimal data transfer.
+Specialized optimization:: Different hash-based structures (chains, trees, tries, MMRs) optimize for specific use cases - from simple ordering to complex querying and incremental updates.
+
+Understanding these primitives is essential for blockchain development, as they form the building blocks for transaction validation, state management, and consensus mechanisms in distributed ledger systems.
 
 
 == Read more

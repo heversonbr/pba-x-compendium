@@ -6,77 +6,122 @@
 
 == Cryptography overview
 
-Cryptography brief historic and current use of cryptography.
-In the past, the design of cryptography protocols used to be more based on heuristics (relying on intuition)
-and the methods we designed mostly in an ad hoc fashion. Nowadays a more scientific approach
-is used, we design methods with well defined models that come with mathematical proofs of security.
-The main idea is that the methods are guaranteed to be secure in the specified model unless some underlaying assumption is false.
+In the past, the design of cryptographic protocols was largely based on heuristics, relying on intuition and ad hoc methods. This approach often led to systems that appeared secure but were later found to contain vulnerabilities when subjected to rigorous analysis.
 
-Cryptography provides a collection of tools for secure interaction in the presence of adversaries.
+Today, cryptography has evolved into a more scientific discipline. Modern cryptographic methods are designed with well-defined security models that come with mathematical proofs of security. The fundamental principle is that these methods are guaranteed to be secure within the specified model, unless some underlying mathematical assumption proves to be false.
 
-- public key encryption
-- digital signatures
-- zero knowledge proofs
-- anonymous digital cache
-- multi-party computation
+This provable security approach provides several key advantages:
+
+- Formal guarantees: Security properties are mathematically proven rather than assumed
+- Clear threat models: We explicitly define what attacks the system can withstand
+- Rigorous analysis: Protocols undergo systematic evaluation against defined adversaries
+- Reproducible results: Security claims can be independently verified
+
+Cryptography provides a comprehensive collection of tools for secure interaction in the presence of adversaries, including:
+
+- *Public key encryption*: Enables secure communication without prior key sharing
+- *Digital signatures*: Provides authentication and non-repudiation
+- *Zero knowledge proofs*: Allows verification of information without revealing the information itself
+- *Anonymous digital cash*: Enables private transactions while preventing double-spending
+- *Multi-party computation:* Allows multiple parties to jointly compute functions over their inputs while keeping those inputs private
+
+These cryptographic primitives serve as building blocks for more complex systems, including the blockchain technologies which we will explore throughout this course.
 
 == Secure communication
 
-A user `A` wants to send a secure message `m` to user `B`.
+Secure communication forms the foundation of all cryptographic systems. When two or more parties wish to communicate over an insecure channel (such as the internet), they face several fundamental challenges:
 
-In cryptography we need to specify what secure means in this case, in other words we need to
-describe which security graranties are desired. We need that because we do not want to start
-designing clever algorithms without knowing the exact goals we want to achieve.
+[example]
+A user `Alice` wants to send a secure message `M` to user `Bob`.
 
-In this case security communication could means many things, for instance:
+In analyzing secure communication, we consider a standard model where:
 
-- Confidentiality:  the message `m` must remain secret (only the recipient must read).
-- Authenticity: the recipient `B` is sure about the origin of message `m` is the sender `A`, and not anybody else.
-- Non-repudiation: `A` cannot deny the fact that it sent the message `m` if he/she did it. 
-- (data) Integrity: if message `m` is tampered (modified/manipulated) with, if will be easily noticed.
-- (data) Availability: not always considered as a cryptographic guarantee, but we want the data to be available to access.
-- (data) Verifiability: in some contexts, we want to prove that possibly sensitive data satisfy some conditions/properties without revealing the information (zero knowledge proofs).
+- `Alice` and `Bob` are legitimate parties who wish to communicate
+- `Eve` is a passive adversary who can eavesdrop on communications (eavesdropper)
+- `Mallory` is an active adversary who can intercept, modify, and inject messages (malicious attacker)
 
-After defining these goals we have to think about how to achieve these goals.
-This envolves typically specifying two points:
+In cryptography we need to specify what secure means, in other words we need to
+describe which security graranties or properties are desired. 
+We need that because we do not want to start designing clever algorithms without knowing the exact goals we want to achieve.
 
-* Define the base layer we will start with:
-* Specify the schemes or methods that make use of this base layer to achieve the goals.
+Secure communication systems aim to achieve several key properties:
+
+- *Confidentiality*: the message `M` must remain secret (i.e., only authorized parties can read the message content).
+- *Authenticity*: `Bob`, the recipient, is sure about the origin of message `M` is the sender `Alice`, and not anybody else (i.e., parties can verify the identity of their communication partners)
+- *Non-repudiation*: senders like `Alice` cannot deny the fact of  having sent a message `M` if she did it. 
+- (data) *Integrity*: if message `M` is tampered (modified/manipulated) with by adversaries like `Mallory`, if will be easily noticed by `Bob`
+- (data) *Availability*: not always considered as a cryptographic guarantee, but we want the data to be available to access
+- (data) *Verifiability*: in some contexts, we want to prove that possibly sensitive data satisfy some conditions/properties without revealing the information (zero knowledge proofs).
+
+
+After defining security goals, we must determine how to achieve them. This process typically involves specifying two key components:
+- *Base layer definition*: Establish the foundational infrastructure and assumptions we begin with
+- *Security mechanisms*: Specify the cryptographic schemes and methods that build upon this base layer to achieve our security goals
 
 In the case of the previous example of secure communication,
 we can for instance, first start by defining an insecure communication channel over the internet to allow `A` sending messages to `B`.
 Then, we speficy the methods that may include encryption schemes, digital signatures and other tools that will
 turn this insecure communication into a secure channel that achieve the goals that we described in the begining.
 
+Considering our secure communication example above: we might begin by defining an insecure communication channel over the internet that allows `Alice` to send messages to `Bob`. This represents our base layer, a simple message delivery system with no security guarantees.
+Next, we specify the cryptographic methods that transform this insecure channel into a secure communication system. These methods typically include:
 
-=== Secure communication: an example
+- Encryption schemes to ensure confidentiality
+- Digital signatures to provide authentication and integrity
+- Key exchange protocols to establish shared secrets
+- Message authentication codes to detect tampering
 
-How A sends a secure message to B if the communication channel (cc) is insecure.
+By layering these cryptographic tools over our base infrastructure, we can achieve the security goals established earlier, transforming an inherently insecure medium into a trustworthy communication channel.
+
+In the context of blockchain systems, secure communication principles ensure that:
+
+- Transactions cannot be forged or modified
+- User identities can be verified through digital signatures
+- Network participants can trust the integrity of distributed data
+- Private information remains confidential when necessary
+
+
+=== Secure Communication: A Practical Example
+
+
+Consider the fundamental problem: How can `Alice` send a secure message to `Bob` when their communication channel (cc) is inherently insecure?
 
 [example]
 `A`  ------cc----->  `B`
 
-First scenario, `A` knows `B` and both meet personally to exchange copies of a key for a specific lock,
-then `A` uses this lock to lock the message inside and send the box to `B`.
-`A` knows that only `B` can have a key to open that lock. So the message is secured.
 
-Now, lets assume that `A` and `B` can not meet each other, or they do not know each other.
-How can they exchange the message securely now ?
-`A` can actually get a box and send an unbraekable lock to `B`, `B` in his turn gets the lock of `A` 
-and puts his own unbreakable lock inside a box and send back to `A`.
-`A` receives the lock of `B` which it can remove from the box, and use the lock of `B` to lock the secure message
-inside a box and send back to `B`, now locked with the lock of `B`, so only `B` can open and read it.
+==== Scenario 1: Pre-shared Keys
 
-This example shows a basic and simplified example of exchanging cryptographic encryption keys.
+In the first scenario, `Alice` and `Bob` know each other and can meet in person to exchange identical keys for a specific lock.
+The process works as follows:
+
+. `Alice` and `Bob` meet privately and each receives a copy of the same key
+. `Alice` uses this key to lock her message in a secure box
+. `Alice` sends the locked box through the insecure channel
+. `Bob` receives the box and uses his copy of the key to unlock it
+. Only `Bob` can read the message since only he possesses the correct key
+
+This approach provides strong security but requires a secure initial meeting to exchange keys.
+
+==== Scenario 2: Public Key Exchange
+
+Now consider a more challenging situation: `Alice` and `Bob` have never met and cannot establish a secure channel for key exchange. How can they communicate securely?
+The solution involves an ingenious key exchange process:
+
+. Initial exchange: `Alice` creates an unbreakable lock (keeping the key) and sends it to `Bob` through the insecure channel
+. Bob's response: `Bob` receives Alice's open lock, attaches his own unbreakable lock to the same box, and sends it back to Alice
+. `Alice` removes her lock: `Alice` receives the box with both locks, removes her own lock (since she has the key), leaving only Bob's lock attached
+. Secure message transmission: `Alice` places her secret message in the box (now secured only with Bob's lock) and sends it back to Bob
+. `Bob` decrypts: `Bob` receives the box and uses his key to unlock his lock, revealing Alice's message
+
+This example demonstrates the fundamental concepts of cryptographic key exchange, showing how parties can establish secure communication even over completely insecure channels without prior contact.
+
+
+NOTE: This physical analogy illustrates the mathematical principles behind public key cryptography and key exchange protocols like Diffie-Hellman. In practice, the "locks" are mathematical operations that are easy to perform in one direction but computationally infeasible to reverse without the proper key.
 
 == Kefckhoff's Principle:
 
-Created by Auguste Kerckhoffs in the 19th century.
-
-The Kerckhoffs' principle states that the security of a cryptographic system should not depend
-on the secrecy of the algorithm, but rather on the secrecy of the cryptographic key.
-The system should remain secure even if the algorith is publicly known, with the key being the only
-confidential element.
+Formulated by Auguste Kerckhoffs in the 19th century, the principle states that the security of a cryptographic system should not depend on the secrecy of the algorithm. It should rely only on the secrecy of the key. A system must remain secure even if the algorithm is publicly known.
 
 In other words:
 [quote]
@@ -84,26 +129,25 @@ In other words:
 A cryptosystem should be secure even if everything about the system is public knowledge, EXCEPT THE KEY.
 ----
 
-We should not rely in the secrecy of the method, which is known as security by obscurity.
+This principle rejects security by obscurity—the idea that keeping the method secret provides meaningful protection. 
 We should not hope that no one is able or capable of figuring it out.
+Instead, security must depend solely on the key.
 
-Reasons for that:
+*Why this matters*
 
-- It is easier to store a short key than the description of the method.
-- if we loose a key it is easier to replace for a new one, than creating a new method.
-- having the method public, allows for the community to work together to validate the method as a secure method.
+- Keys are simpler to manage: storing a short key is easier than hiding an entire algorithm.
+- Keys are replaceable: if a key is compromised, it can be swapped without redesigning the system.
+- Public algorithms improve security: open methods enable community review, testing, and validation..
 
 Following Kerckhoffs principle allows for rigorous testing and analysis, ensuring the security of the method or system that uses it.
 
-Therefore, the power of cryptography methods relies on good choice of keys.
-Keys that are random and unpredictable are harder to crack.
-We measure the level of randomness of a key via entropy (the amount of non-redundant information cointained, less random lower entropy).
-Choosing keys from high entropy distributions, adversaries will have lower probability of obtaining them.
+Therefore, security depends on strong, unpredictable keys, not hidden algorithms.
+Keys must be chosen from high-entropy distribution, more randomness means higher entropy, reducing the chance of adversaries guessing or deriving the key.
+Rigorous testing of public algorithms ensures robust, trustworthy systems.
 
-== Take-away
+== Takeaways
 
-- Criptography is today a core science for building secure and highly complex decentralized systems. 
-- We want to build systems with strong secutiry guarantess, with the smallest amount of assumptions as possible,
-and at the same time ensuring high performances. And this is an important trade-off.
-- Understanding the basic primitives of cryptographic tools are core to achieve that.
+- Cryptography is a fundamental science for building secure, complex, decentralized systems.
+- Designing such systems requires balancing strong security guarantees with minimal assumptions and high performance—a critical trade-off.
+- A solid understanding of basic cryptographic primitives is essential to achieving this balance.
 
