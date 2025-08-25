@@ -31,6 +31,13 @@ h1, .h1 {
   line-height: 1.2;
 }
 
+.subtitle{
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  color: #ff1dbfcc;
+
+}
+
 h2, .h2 {
   font-weight: 700;
   line-height: 1.2;
