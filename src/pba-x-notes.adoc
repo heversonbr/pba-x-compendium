@@ -1,0 +1,23 @@
+= PBA-x Compendium 3rd wave
+:doctype: book
+:toc: left
+:toclevels: 3
+//:author: Heverson B. Ribeiro
+//:authorinitials: HBR
+//:email: heversonbr@gmail.com
+
+== Introduction
+
+This document contains comprehensive notes from the *3rd wave* of the *PBA-x* the online edition of the *Polkadot Blockchain Academy* program. The 3rd edition of the PBA-x took place between June/July 20025.
+The primary goal of this document is to transform raw notes from video lessons into well-structured, readable content that can serve as a definitive reference guide for learners to refer to and review the full course material.
+
+
+include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
+
+// include::module_notes/economics_game_theory.adoc[leveloffset=+1]
+
+// include::module_notes/fundamentals_blockchains.adoc[leveloffset=+1]
+
+// include::module_notes/polkadot_sdk.adoc[leveloffset=+1]
+
+// include::module_notes/protocol_overview.adoc[leveloffset=+1]

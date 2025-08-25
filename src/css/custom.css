@@ -1,0 +1,82 @@
+
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import "https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css";
+
+#toctitle, h1, h2, h3, h4, h5, h6,
+.sidebarblock > .content > .title {
+  color: rgba(255, 29, 191, 0.8);
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #321d47;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #e6007a;
+  font-size: 28px;
+}
+
+element {
+  color: #000000;
+}
+
+.listingblock > .title, .exampleblock > .title{
+  text-rendering: optimizeLegibility;
+  text-align: left;
+  font-family: "Noto Serif","DejaVu Serif",serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: #ff1dbfcc;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+
+
+.exampleblock > .content {
+  background: #cbb2f987;
+  border-color: #e0e0dc;
+  box-shadow: 0 1px 4px #e0e0dc;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  border-radius: 4px;
+}
+
+table thead th {
+  background-color: #cbb2f987;
+}
+
+td.tableblock {
+  border: 0 solid #8339bf5e;
+
+}
+
+.admonitionblock > table td.content {
+  color: #7938bb;
+}
+
+
