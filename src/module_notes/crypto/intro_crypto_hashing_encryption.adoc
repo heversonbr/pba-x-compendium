@@ -102,8 +102,6 @@ This is a fundamental concept known as the *Pigeonhole Principle*, which guarant
 
 *Why Collisions Are Inevitable*?
 
-The rationale behind that:
-
 ----
 The reason collisions must happen is based on basic math and logic.
 A hash function takes inputs that can be infinitely large or very big.
