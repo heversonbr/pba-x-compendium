@@ -55,6 +55,7 @@ Secure communication systems aim to achieve several key properties:
 
 
 After defining security goals, we must determine how to achieve them. This process typically involves specifying two key components:
+
 - *Base layer definition*: Establish the foundational infrastructure and assumptions we begin with
 - *Security mechanisms*: Specify the cryptographic schemes and methods that build upon this base layer to achieve our security goals
 
