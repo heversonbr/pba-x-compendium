@@ -6,8 +6,6 @@
 
 == Introductions
 
-In this section we discuss price finding mechanisms.
-
 Price finding mechanisms (also known as price discovery mechanisms) refer to the processes through which the prices of goods, services, or assets are determined in a market.
 These mechanisms are essential for efficiently allocating resources in an economy.
 Prices serve as signals to both buyers and sellers, helping them make informed decisions about production, consumption, and investment.
@@ -48,26 +46,26 @@ Scenario:
 
 - Seller (Selena): Wants to sell one item.
 - Buyers (Alice and Bob): Each has a private (secret) valuation of how much the item is worth to them.
-- Key Assumption: The buyers’ valuations are independently drawn from a known probability distribution (between 0 and 1), but their actual values are unknown to Selena.
+- Key Assumption: The buyers' valuations are independently drawn from a known probability distribution (between 0 and 1), but their actual values are unknown to Selena.
 
 
 ==== Price Posting Mechanism
 
-Selena chooses a single posted price (𝑝), and sells the item to the first buyer willing to pay that price.
+Selena chooses a single posted price (`𝑝`), and sells the item to the first buyer willing to pay that price.
 
 *Probability of Sale*:
 
-Since valuations are between 0 and 1, and assuming Alice and Bob’s valuations are uniformly distributed:
-The probability that both buyers are below the price is p^2 (since the chance that Alice’s valuation is below p is p, and Bob’s valuation is also p, independently).
-So, the probability of a sale is: 1 - p^2
+Since valuations are between 0 and 1, and assuming Alice and Bob's valuations are uniformly distributed:
+The probability that both buyers are below the price is `p^2` (since the chance that Alice's valuation is below `p` is `p`, and Bob's valuation is also `p`, independently).
+So, the probability of a sale is: `1 - p^2`
 
 
 *Expected Revenue*:
 
-Revenue is the price multiplied by the chance of a sale: Expected Revenue = p * (1 - p^2)
+Revenue is the price multiplied by the chance of a sale: `Expected Revenue = p * (1 - p^2)`
 Selena should choose the price p that maximizes this expression.
 
-Optimal Price: When you solve this optimization problem (by taking the derivative), the optimal expected revenue turns out to be approximately 0.38.
+Optimal Price: When you solve this optimization problem (by taking the derivative), the optimal expected revenue turns out to be approximately `0.38`.
 
 *What shows this example*:
 
@@ -107,14 +105,12 @@ Optimal Price: When you solve this optimization problem (by taking the derivativ
 |===
 
 
-=== Summary
+=== Take-aways
 
 - This example shows how sellers make decisions under uncertainty.
 - Provides a simple but powerful model for understanding price setting.
 - Highlights why more advanced mechanisms (like auctions) may be more effective.
 - Builds intuition that scales up to more complex market scenarios.
-
-
 
 == Auction mechanisms
 
@@ -124,34 +120,30 @@ An auction is a competitive game for buyers, where the seller makes the rules.
 === A. Static Auctions (Sealed-Bid Auctions)
 
 *Key Feature:*  
-All bids are submitted *simultaneously and privately*.
-
-* Bidders cannot see or respond to each other's bids.
+All bids are submitted simultaneously and privately. Bidders cannot see or respond to each other's bids.
 
 *Common Formats:*
-- *First-Price Auction:*  
-  The highest bidder wins and pays *their own bid*.
 
-* *Second-Price Auction (Vickrey Auction):*  
-** The highest bidder wins but pays *the second-highest bid*.  
-** This format encourages bidders to *bid truthfully* (bidding your true valuation is the dominant strategy).
+* First-Price Auction:  
+  The highest bidder wins and pays their own bid.
+* Second-Price Auction (Vickrey Auction): 
+** The highest bidder wins but pays the second-highest bid.  
+** This format encourages bidders to bid truthfully (bidding your true valuation is the dominant strategy).
 
 === B. Dynamic Auctions (Open-Bid Auctions)
 
 *Key Feature:*  
-Bids are made *sequentially and publicly*.
-
-* Bidders can observe others' bids and adjust their own.
+Bids are made *sequentially and publicly*. Bidders can observe others' bids and adjust their own.
 
 *Common Formats:*
 
-* *Ascending Price Auction (English Auction):*  
+* Ascending Price Auction (English Auction): 
 **  Starts at a low price.  
 **  Bidders call out progressively higher bids.
 **  Ends when no one is willing to bid higher.  
 **  The most familiar auction type (e.g., Sotheby's).
 
-* *Descending Price Auction (Dutch Auction):*
+* Descending Price Auction (Dutch Auction):
 **  Starts at a high price.  
 **  Price drops until someone accepts.  
 **  Common in flower markets and IPOs.
@@ -170,9 +162,7 @@ Bids are made *sequentially and publicly*.
 === Reserve Price
 
 *Definition:*  
-The *minimum acceptable price* set by the seller.
-
-* If no bidder meets the reserve price, *the item is not sold.*
+The minimum acceptable price set by the seller. If no bidder meets the reserve price, the item is not sold.
 
 *Purpose:*
 - Protects the seller from selling at too low a price.

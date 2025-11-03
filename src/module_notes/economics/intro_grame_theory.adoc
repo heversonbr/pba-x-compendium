@@ -11,12 +11,14 @@ Game theory is the study of strategic interactions between individuals or groups
 It is used to analyze situations where players (which can be people, companies, countries, etc.) make decisions that are interdependent, using the information that is available to them.
 
 Game theory is often intuitive and practical.
-It is a powerful tool to simplify complex decision-making processi, analyse strategic situations and predict their outcomes.
+It is a powerful tool to simplify complex decision-making process, analyse strategic situations and predict their outcomes.
 
 Game theory has its roots in the 19th century, when French economist Antoine Augustin Cournot, in 1838, introduced a mathematical model of duopoly competition that captured the strategic interdependence of firms.
-His work laid an early foundation by describing how each firm’s optimal decision depends on the actions of its rival—a concept that would later become central to game theory.
-However, the formal birth of the field came in 1928, when John von Neumann published the minimax theorem for zero-sum games, providing the first rigorous mathematical framework for strategic decision-making.
-Von Neumann, alongside Oskar Morgenstern, later expanded these ideas in their 1944 book Theory of Games and Economic Behavior, which systematically applied game theory to economics.
+His work laid an early foundation by describing _how each firm's optimal decision depends on the actions of its rival_, a concept that would later become central to game theory.
+
+However, the formal birth of the field came in 1928, when John von Neumann published the *minimax* theorem for zero-sum games, providing the first rigorous mathematical framework for strategic decision-making.
+Von Neumann, alongside Oskar Morgenstern, later expanded these ideas in their 1944 book _Theory of Games and Economic Behavior_, which systematically applied game theory to economics.
+
 The discipline was further revolutionized in the 1950s by John Nash, who introduced the concept of Nash Equilibrium, enabling the analysis of non-zero-sum games where cooperation and competition coexist.
 Since then, game theory has evolved into a vital tool across economics, biology, political science, and computer science, shaping modern understanding of strategy, negotiation, and competition.
 
@@ -26,6 +28,7 @@ In political science, it models voting systems, international negotiations, and 
 Biologists use it to study animal behavior and evolutionary strategies.
 In computer science, game theory is crucial for algorithm design, artificial intelligence, cybersecurity, and network management.
 It also plays a role in psychology, sociology, and even environmental studies, helping to understand cooperation, competition, and decision-making in complex systems.
+
 Its versatility makes it a key tool for analyzing strategic interactions in almost any discipline.
 
 
@@ -52,18 +55,18 @@ It uses simple models and abstracts away some of the complexity to focus on the 
 By simplifying things it can also looses some realism. (for instance, people have motivations that you do not account for while modeling the game).
 
 * *game*: a strategic interaction between players. where certain key elements are common knowledge. 
-* *players*: the decision-makers in the game, we always assume that players are smart and rational
+* *players*: the decision-makers in the game, we always assume that players are smart and rational.
 * *strategy*: the possible action the players can take.
 * *payoffs or utility*: the outcomes or rewards the players receive based on the combination of strategies choosen. Players are utility maximazers.
 
 * types of games:
-** simultaneous (static) vs. Sequential (dynamic): whether players move at the same time or in sequence (e.g., a sealed bid option vs an english auction). 
-** complete vs. incomplete information: whether all players know the rules, utility, and payoff functions to everyone or players know the rules but part of player's game data is private (e.g., chees is an example of complete and poker of incomplete information)
-** symmetryc vs. assymetric: whether all players have the same chances and rewards, or they vary accros players.
-** *Nash equilibriAum*: no player can benefit by changing their strategy if others keep theirs unchange.
-** *perfect vs. imperfect information: In perfect information games, all players know previous actions taken, while in imperfect information games, some actions or information remain hidden.
-** zero-sum vs. non-zero-sum: whether one player’s gain is exactly another’s loss.
-** cooperative vs. non-cooperative: whether players can form binding agreements.
+** *Simultaneous* (static) vs. *Sequential* (dynamic): whether players move at the same time or in sequence (e.g., a sealed bid option vs an english auction). 
+** *Complete* vs. *Incomplete* information: whether all players know the rules, utility, and payoff functions to everyone or players know the rules but part of player's game data is private (e.g., chees is an example of complete and poker of incomplete information).
+** *Symmetryc* vs. *Assymetric*: whether all players have the same chances and rewards, or they vary accros players.
+** *Nash equilibrium*: no player can benefit by changing their strategy if others keep theirs unchange.
+** *Perfect* vs. *Imperfect* information: In perfect information games, all players know previous actions taken, while in imperfect information games, some actions or information remain hidden.
+** *zero-sum* vs. *non-zero-sum*: whether one player’s gain is exactly another’s loss.
+** *Cooperative* vs. *Non-cooperative*: whether players can form binding agreements.
 
 
 Note: The Nash Equilibrium is a general concept where no player can benefit by changing their strategy if others keep theirs unchanged,
@@ -95,30 +98,29 @@ The police separate them and offer each the following deal:
 | Both get 2 years in prison
 |===
 
-== Explanation
+=== Explanation
 
 - *If both stay silent*: They each get 1 year in prison. (Best combined outcome)
 - *If Alice betrays and Bob stays silent*: Alice goes free, Bob gets 3 years.
 - *If Bob betrays and Alice stays silent*: Bob goes free, Alice gets 3 years.
 - *If both betray*: They each get 2 years in prison.
 
-== Key Point
+=== Key Point
 
 Even though *the best collective outcome is if both stay silent*, the *rational individual choice is to betray* because:
+
 - Betrayal offers a chance to go free.
 - Betrayal avoids the worst-case scenario of getting 3 years if the other betrays.
 
 This leads to both likely betraying each other, which is worse than mutual silence.
 
+*The dilemma highlights*:
 
-
-The dilemma highlights:
-
-- Conflict Between Individual and Collective Interest
-- Trust and Cooperation Are Fragile
-- Short-Term vs. Long-Term Thinking
-- Why Self-Interest Can Harm Groups
-- The Core of Many Real-Life Social Dilemmas: Negotiations, Trade agreements, Political alliances, Teamwork in organizations
+- Conflict between individual and collective interest
+- Trust and cooperation are fragile
+- Short term vs long term thinking
+- Why self interest can harm groups
+- The core of many real life social dilemmas: negotiations, trade agreements, political alliances, teamwork in organizations
 
 
 == Introduction to Nash Equilibrium
@@ -140,27 +142,31 @@ Lets analyse three examples, their Nash equilibrium and potential consequences
 
 Two players: Alice (Proposer) and Bob (Responder).
 
+[example]
+----
 - Alice is given $10 and must offer a split to Bob (e.g., $7 for Alice, $3 for Bob).
 - Bob can either accept or reject the offer.
 - If Bob accepts → Both get the proposed amounts.
 - If Bob rejects → Both get nothing.
+----
 
 Nash Equilibrium suggests Alice should offer the smallest possible amount (e.g., $1) and Bob should accept because getting something is better than nothing.
 In practice, Bob often rejects offers he perceives as unfair (e.g., offers less than 20-30% of the total).
 People are willing to sacrifice money to punish unfairness.
 
 Key Insight:
+
 - The Nash Equilibrium predicts minimal offers and acceptance.
 - Human behavior often deviates from the Nash Equilibrium because people value fairness, equity, and emotional satisfaction, not just monetary gain.
 
-	
 === The Game of Chicken
 
 Two drivers, *Alice* and *Bob*, are speeding toward each other on a collision course.
 
 Each has two choices:
-- *Swerve*: Avoid the crash but be seen as the "chicken" (loser).
-- *Stay*: Risk a head-on collision to "win" if the other swerves.
+
+. *Swerve*: Avoid the crash but be seen as the "chicken" (loser).
+. *Stay*: Risk a head-on collision to "win" if the other swerves.
 
 [cols="3,2,2", options="header"]
 |===
@@ -177,25 +183,24 @@ Each has two choices:
 
 ==== Nash Equilibrium
 
-- There are *two pure strategy Nash Equilibria*:
-  - Alice stays, Bob swerves.
-  - Bob stays, Alice swerves.
-- There is also a *mixed strategy Nash Equilibrium* where each player randomizes between staying and swerving with certain probabilities.
+* There are *two pure strategy Nash Equilibria*:
+** Alice stays, Bob swerves.
+** Bob stays, Alice swerves.
+* There is also a *mixed strategy Nash Equilibrium* where each player randomizes between staying and swerving with certain probabilities.
 
 ==== Core Point
 
-- Unlike the Prisoner's Dilemma, the worst possible outcome here is mutual defiance (the crash).
-- The Nash Equilibrium shows that **players must avoid mutual disaster**, but there is no stable solution where both players insist on winning.
-- The *Game of Chicken highlights the role of bluffing, risk-taking, and brinkmanship* in competitive situations like:
-  - Political standoffs
-  - Price wars
-  - Dangerous negotiations
+* Unlike the Prisoner's Dilemma, the worst possible outcome here is mutual defiance (the crash).
+* The Nash Equilibrium shows that **players must avoid mutual disaster**, but there is no stable solution where both players insist on winning.
+* Highlights the role of bluffing, risk-taking, and brinkmanship in competitive situations like:
+** Political standoffs
+** Price wars
+** Dangerous negotiations
 
 ==== Real-World Insight
 
-- Even though the Nash Equilibrium suggests one player should eventually yield, real-life players often test each other's willingness to stay,
+Even though the Nash Equilibrium suggests one player should eventually yield, real-life players often test each other's willingness to stay,
 leading to dangerous escalation (e.g., Cold War nuclear standoffs).
-
 
 
 === Coordination Game
@@ -208,6 +213,7 @@ The key feature is that players' strategies are *aligned*, leading to mutually b
 Two friends, *Alice* and *Bob*, are trying to meet in a city but cannot communicate.
 
 Each can go to either:
+
 - *Location A* (Train Station)
 - *Location B* (Cafe)
 
@@ -226,30 +232,26 @@ Each can go to either:
 
 ==== Nash Equilibrium
 
-- *Two pure strategy Nash Equilibria*:
-  - Both choose A.
-  - Both choose B.
-- Both outcomes are stable because *neither player benefits from changing their strategy if the other player’s choice is known*.
+* *Two pure strategy Nash Equilibria*:
+** Both choose A.
+** Both choose B.
+* Both outcomes are stable because *neither player benefits from changing their strategy if the other player’s choice is known*.
 
 ==== Core Point
 
-- Coordination Games focus on *alignment* rather than conflict.
-- The players' main challenge is figuring out *how to coordinate*, especially when communication is limited.
-- Real-life examples include:
-  - Agreeing on standards (e.g., using the same software)
-  - Driving conventions (e.g., driving on the right or left side of the road)
-  - Synchronizing technology (e.g., using the same file formats)
+* Coordination Games focus on *alignment* rather than conflict.
+* The players' main challenge is figuring out *how to coordinate*, especially when communication is limited.
+* Real-life examples include:
+** Agreeing on standards (e.g., using the same software)
+** Driving conventions (e.g., driving on the right or left side of the road)
+** Synchronizing technology (e.g., using the same file formats)
 
-==== Real-World Insight
+==== Real-World Insights
 
 - Sometimes, one equilibrium is *more efficient* (Pareto superior), but without communication, players might settle on less optimal conventions.
 - *Focal points* (natural, obvious choices) often guide coordination when multiple equilibria exist.
 
-
-
-
 == Schelling Points: Quick Explanation
-
 
 A *Schelling Point* (also called a *Focal Point*) is a solution or course of action that people naturally converge on *without prior communication*.
 
@@ -261,10 +263,10 @@ Two people, *Alice* and *Bob*, must meet in New York City tomorrow but cannot co
 
 Question: *Where should they go?*
 
-- There are countless possible locations, but many people intuitively choose:
-  - *Grand Central Station at noon*.
+There are countless possible locations, but many people intuitively choose: *Grand Central Station at noon*.
 
 Grand Central Station becomes the *Schelling Point* because:
+
 - It is prominent.
 - It is a natural, logical, and culturally significant place to meet.
 
@@ -273,7 +275,7 @@ Grand Central Station becomes the *Schelling Point* because:
 - *Schelling Points* are about *natural, psychological coordination*.
 - People rely on shared culture, experience, or logic to predict what others will do in the absence of communication.
 - Schelling Points become stronger as more people successfully coordinate using them.
-- They are especially important in *coordination games with multiple equilibria*.
+- They are especially important in coordination games with multiple equilibria.
 
 === Real-World Examples
 
