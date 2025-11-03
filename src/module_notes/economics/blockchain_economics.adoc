@@ -1,0 +1,87 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+= Economics Aspects of Blockchains
+
+This section examines how the economic concepts described earlier apply to blockchain systems.
+We explore blockchain markets and the resources exchanged within them, including block space and state storage.
+Through concrete examples, we analyze opportunity costs in these markets and examine how network effects shape blockchain ecosystems.
+
+At its core, a market is a system where individuals, institutions, or automated protocols exchange value.
+Each blockchain operates its own distinct market, often exhibiting behaviors that differ from traditional markets.
+Nevertheless, the same fundamental economic principles remain applicable.
+
+
+== Blockspace
+
+Blockchain networks provide several valuable resources, with cryptocurrencies being the most recognizable. However, another critical resource is blockspace, the capacity within blocks to record transactions. 
+
+Consider Bitcoin as an example: transactions must be included in blocks to be processed and confirmed. To secure a position within a block, users must compensate miners with transaction fees proportional to the data size their transaction requires.
+
+The Bitcoin network operates through a competitive bidding mechanism. Users signal their willingness to pay by attaching fees to their transactions, essentially placing bids for limited blockspace. Block producers (miners) then select transactions offering the highest fees to maximize their revenue, filling each block up to its capacity limit. This creates an auction-style marketplace where increased demand directly drives up the cost of blockspace, as users compete to have their transactions prioritized.
+
+A distinctive characteristic of the blockspace market is its remarkable price volatility. Historical data on Bitcoin transaction fees reveals dramatic fluctuations fees can surge threefold within a short period, only to decline sharply months later. This volatility significantly exceeds what we observe in conventional markets. What drives such extreme price swings in blockchain networks?
+
+The answer lies in the interplay between supply and demand, specifically in the concept of supply elasticity. In typical markets, producers respond to rising demand by increasing output. For instance, when ice cream demand surges during summer, manufacturers can ramp up production accordingly. This responsive adjustment represents high supply elasticity. Bitcoin's blockspace market operates fundamentally differently. Regardless of how many miners join the network, the supply of blockspace remains fixed, blocks are generated at a constant average rate of one every ten minutes. This represents perfectly inelastic supply.
+
+Consequently, any fluctuation in demand (whether seasonal trends, speculative activity, or network congestion) translates directly into price changes, with no supply-side buffer to moderate these swings. It's worth noting an important distinction: while additional miners don't expand blockspace availability, they do strengthen the network's security through increased computational power dedicated to validating transactions.
+
+
+Recent blockchain innovations, such as roll-ups and parachains, address a fundamental challenge: expanding blockspace capacity while preserving network security. These technologies aim to introduce greater elasticity into blockspace supply, enabling it to adapt more effectively to fluctuating demand. By achieving this balance, blockchain networks can accommodate growth without compromising the security guarantees that make them valuable in the first place.
+
+== Blockchain state
+
+State storage represents another constrained resource within blockchain networks. Ethereum provides an illustrative example of how this scarcity manifests. The Ethereum network operates through validators—nodes analogous to Bitcoin's miners—but with expanded functionality. Specifically, Ethereum enables developers to deploy smart contracts, which are self-executing programs that significantly enhance the network's capabilities beyond simple transactions.
+
+While individual transactions occupy space in a single block temporarily, smart contracts generate data that must be stored indefinitely across all validator nodes. This persistent data, known collectively as the Ethereum state, has accumulated to hundreds of gigabytes and continues expanding. A significant portion of this stored data corresponds to inactive or abandoned applications, creating what the blockchain community identifies as the "state bloat problem", the inefficient accumulation of obsolete data that all validators must nevertheless maintain.
+
+One proposed mechanism to address this issue is _state rent_, which operates on a straightforward principle: users pay ongoing fees proportional to the storage space their contracts consume. Failure to continue payments results in data removal from the state. This economic pressure incentivizes developers to minimize their storage footprint and clean up unnecessary data.
+
+Ethereum implements a variation of this approach through a deposit-refund system. When deploying a contract, developers must lock up a deposit in Ether. They can later reclaim this deposit by removing data that has become obsolete. 
+
+This mechanism creates a financial incentive structure that naturally leads us to our next topic: opportunity costs in blockchain systems.
+
+=== Opportunuty costs
+
+Opportunity cost represents the value of the next best alternative forgone when making a decision. In economic terms, every choice involves sacrificing potential benefits from unchosen options.
+
+Within blockchain systems, opportunity costs emerge in various contexts. Consider the state rent mechanism discussed previously: when users allocate ETH to maintain data storage on the Ethereum blockchain, they simultaneously relinquish other potential uses for that capital. The funds committed to storage fees cannot simultaneously be staked for rewards, deployed in decentralized finance protocols, or held for potential price appreciation. Conversely, choosing to remove data from the blockchain, thereby avoiding rental costs—means sacrificing the benefits of permanent on-chain accessibility and the functionality that stored data enables. This creates a direct trade-off: perpetual data storage versus capital flexibility.
+
+Staking presents another clear illustration of opportunity costs in action. When validators lock their ETH to participate in network consensus and earn staking rewards, they accept certain limitations. The staked capital becomes illiquid, it cannot be readily traded, deployed in alternative investments, or sold during favorable market conditions. The opportunity cost here is the potential profit from price movements or returns from other investment vehicles. Inversely, holders who keep their ETH liquid forgo the consistent yield that staking provides. Each participant must weigh these competing benefits based on their individual circumstances and risk tolerance.
+
+These examples demonstrate how blockchain participants constantly navigate trade-offs, where resource allocation decisions carry implicit costs in the form of unrealized alternatives.
+
+== Network effects
+
+*Network Effects*
+
+A network effect occurs when a product or service becomes increasingly valuable as more users adopt it. The benefit any individual derives from participation grows proportionally with the size of the user base. This phenomenon manifests across diverse domains: telephone networks become more useful as more people can be reached, social media platforms gain value through larger communities, and financial exchanges offer better liquidity with more participants. Blockchain networks exhibit similar dynamics.
+
+In traditional business contexts, companies leverage network effects to establish competitive moats. Consider social media platforms: a new entrant might offer superior features and innovative functionality, yet struggle to attract users. The fundamental barrier is not technological inferiority but rather the absence of an existing user base. Without an established community to interact with, even objectively better platforms fail to provide the social connectivity that users seek. This creates powerful lock-in effects that protect incumbent platforms.
+
+Blockchain networks like Ethereum and Polkadot present a fundamentally different model. As public infrastructure, these networks distribute the benefits of network effects across all participants rather than concentrating them within a single corporate entity. Unlike Web2 platforms where applications operate within proprietary ecosystems controlled by individual companies, blockchain-based applications can be developed and deployed by anyone. This open architecture creates a multi-sided network effect: as more users join, developers find larger audiences for their applications; as more developers build, users gain access to richer functionality; and as both groups grow, validators benefit from increased transaction activity and token demand. These reinforcing dynamics generate compounding value that accrues to the entire ecosystem rather than a single gatekeeper.
+ 
+//TODO: add the economics of polkadot here ?
+
+== Takeaways
+
+This section has explored how fundamental economic principles operate within blockchain ecosystems, revealing both similarities to and departures from traditional markets.
+
+- Blockspace represents a unique market characterized by perfectly inelastic supply. Unlike conventional markets where producers adjust output in response to demand, blockchain networks maintain fixed block production rates. This structural constraint causes demand fluctuations to translate directly into price volatility, resulting in the dramatic fee spikes observed across blockchain networks. Emerging technologies like roll-ups and parachains attempt to introduce greater supply elasticity while preserving security guarantees.
+
+- State storage presents a distinct scarcity challenge. The perpetual nature of blockchain data storage creates accumulation pressures that burden all network participants. Economic mechanisms such as state rent and deposit-refund systems aim to internalize these costs, encouraging efficient resource utilization by making storage expenses explicit rather than externalized.
+
+- Opportunity costs permeate blockchain participation. Every allocation decision—whether committing capital to state rent, locking tokens for staking, or maintaining liquidity—involves trade-offs. Participants continuously balance competing benefits: storage versus capital flexibility, staking yields versus market opportunities, on-chain permanence versus resource efficiency.
+
+- Network effects in public blockchain infrastructure differ fundamentally from their Web2 counterparts. Rather than concentrating value within proprietary platforms, open blockchain networks distribute benefits across users, developers, and validators. This creates reinforcing growth dynamics where increased participation by any group enhances value for all others, generating ecosystem-wide prosperity rather than monopolistic advantages.
+
+Together, these economic dynamics shape how blockchain networks evolve, who participates, and how value flows through decentralized systems.
+
+== References:
+
+- https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/
+
+- https://polkadot-blockchain-academy.github.io/pba-content/singapore-2024/syllabus/2-Economics/4-Economics_of_Polkadot-slides.html#/21/0/2
+
+- https://online.hbs.edu/blog/post/what-are-network-effects

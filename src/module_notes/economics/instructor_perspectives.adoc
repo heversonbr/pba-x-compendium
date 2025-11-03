@@ -1,0 +1,81 @@
+:doctype: book
+:toc:
+:toclevels: 3
+
+= Instructors Perspectives
+
+This section shares some thoughts from the instructor's point of view, as presented in the end of the module. 
+
+== Traditional vs. Behavioral Economics
+
+*What economic concepts play a role in our daily lives?*
+
+Behavioral economics combines psychology with economic theory to explain how real people make decisions — not just how perfectly rational actors *should* behave. These insights directly apply to real-world choices and everyday behavior.
+
+
+== Web3 Developers and Economics Knowledge
+
+*Why is it important for blockchain builders to learn economics?*
+
+When designing blockchains, the goal is often to build systems that are open and permissionless. In such environments, we do not have traditional social or institutional mechanisms to enforce good behavior. We often don't know who the participants are, so we rely on *economic incentives* to encourage desired behaviors.
+
+Understanding economics enables developers to:
+
+- Analyze and evaluate existing blockchain protocols
+- Design new mechanisms and incentive systems
+- Better participate in decentralized ecosystems as builders, validators, or users
+
+Economics knowledge gives Web3 developers a strong advantage in both system design and participation.
+
+
+== Schelling Points and Predictability of Choices
+
+Schelling points highlight how psychology influences our decisions. A Schelling point is a solution that people naturally gravitate toward without communication, because it feels intuitive, obvious, or fair to most participants.
+
+
+== Tragedy of the Commons
+
+=== How does it impact public blockchain design?
+
+The *Tragedy of the Commons* describes situations where individuals, acting in their own self-interest, overuse or under-maintain a shared resource, harming the entire group in the long run.
+
+Common goods are:
+
+- *Rivalrous* — one person’s use reduces availability for others
+- *Non-excludable* — difficult to prevent anyone from using them
+
+=== Real-World Example
+
+Examples include clean air, public parks, or open-source software. Everyone benefits from them, but contributing to their maintenance requires effort or cost. Many individuals think:
+
+ If others contribute, I can still benefit without doing anything. 
+
+This *free-rider problem* leads to under-provision and eventually resource degradation.
+
+=== Impact on Public Blockchains
+
+Public blockchains face similar challenges. They rely on:
+
+- Developers building infrastructure
+- Validators securing the network
+- Contributors enhancing tools, governance, and education
+
+If too many users benefit without contributing, the ecosystem stagnates. Without a central authority, blockchains must embed incentives in their protocols.
+
+=== Example: Polkadot Treasury
+
+Polkadot introduces an on-chain Treasury funded through network inflation to support public goods. Treasury funds go to:
+
+- Core infrastructure
+- Community tools
+- Ecosystem growth and education
+
+This ensures essential public goods continue to be funded even if individual actors wouldn’t voluntarily support them.
+
+By embedding incentives at the protocol level, blockchains can sustainably develop public goods and avoid the Tragedy of the Commons.
+
+== Takeaways
+
+- The Tragedy of the Commons is a central consideration in public blockchain design. Without proper incentives, essential public goods are underfunded.
+
+- Protocol-level systems, such as on-chain treasuries and inflation-funded grants, help ensure sustainable growth, resilience, and innovation in open blockchain ecosystems, even when individual users may prefer to free-ride.
