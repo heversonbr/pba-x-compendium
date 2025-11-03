@@ -1,10 +1,11 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[section-hashing-encryption]]
 = Hashing and Encryption
 
-== Hash functions
+== Hash Functions
 
 Hash functions are one of the fundamental building blocks of cryptography.
 A hash function is a one-way function that creates a compact representation of input data.
@@ -17,7 +18,7 @@ That means it is very hard to find two different inputs that produce the same ha
 At their core, hash functions are used to uniquely identify data.
 
 
-=== Hash Function in Action
+=== Hash Function In Action
 
 SHA-256 is a widely used hash function that belongs to the SHA-2 (Secure Hash Algorithm 2) family.
 SHA-2 is a collection of cryptographic hash functions designed for secure data hashing.
@@ -36,8 +37,9 @@ Even small changes in the input produce completely different hashes.
 This property is known as the avalanche effect.
 It demonstrates how hash functions are sensitive to input and useful for ensuring data integrity.
 
+<<section-hashing-encryption,Top of Section>>
 
-=== Properties of Hash Funtions
+=== Properties Of Hash Funtions
 
 * accept unbounded size input
 * map to a bounded fixed size output
@@ -64,7 +66,7 @@ Weak collision resistance, which is also called second preimage resistance.
 Strong collision resistance, is also known as Collision resistence.
 
 
-==== Quick summary
+==== Quick Summary
 
 [cols="1,3,3", options="header"]
 |===
@@ -83,9 +85,9 @@ Strong collision resistance, is also known as Collision resistence.
 | Signature forgery (swap benign document with malicious one after signing)
 |===
 
+<<section-hashing-encryption,Top of Section>>
 
-
-=== Cryptographic vs Non-cryptographic Hash functions
+=== Cryptographic vs Non Cryptographic Hash Functions
 
 
 - *Cryptographic hash functions*:
@@ -135,6 +137,7 @@ With a commitment scheme, you can prove you committed to some data without revea
 
 We will see commitment schemes in more detail later.
 
+<<section-hashing-encryption,Top of Section>>
 
 === Takeaways
 
@@ -145,7 +148,9 @@ We will see commitment schemes in more detail later.
 - They are essential for securing data and verifying identities.
 - Hash functions play a critical role in blockchain technology to ensure transaction integrity and security.
 
-== Commitment schemes
+<<section-hashing-encryption,Top of Section>>
+
+== Commitment Schemes
 
 A commitment scheme is a cryptographic primitive that allows one to commit to a chosen value (or chosen statement) while keeping it hidden to others, with the ability to reveal the committed value later.
 
@@ -188,7 +193,7 @@ You can use a hash function to build a simple commitment scheme.
   `H(x | r) == C`
 - If the values match, the commitment is valid.
 
-==== Why It Works: Required Properties
+==== Why It Works: required properties
 
 - **Hiding:**  
   The random `r` hides `x`.  
@@ -203,6 +208,7 @@ You can use a hash function to build a simple commitment scheme.
 Commitment schemes built from hash functions are simple but powerful.
 They are used in many cryptographic protocols to ensure fairness and privacy.
 
+<<section-hashing-encryption,Top of Section>>
 
 === Real-World Use Cases
 
@@ -227,9 +233,7 @@ Commitment schemes are used in many real-world cryptographic systems.
 
 These use cases show how commitments provide both privacy and trust.
 
-
-
-
+<<section-hashing-encryption,Top of Section>>
 
 == Encryption: Symmetric vs Asymmetric
 
@@ -292,8 +296,9 @@ Examples: RSA, ElGamal, Paillier
 | | Non-repudiation
 |===
 
+<<section-hashing-encryption,Top of Section>>
 
-== Assymetric Encryption: Explained Example
+== Assymetric Encryption: explained example
 
 Two breakthrough algorithms that allow secure communication between two parties without a shared secret:
 
@@ -343,6 +348,8 @@ Now both share the same secret S, without having sent it directly.
 - DH by itself provides key agreement, not encryption or authentication.
 - It’s vulnerable to man-in-the-middle attacks unless combined with authentication (like in TLS).
 
+<<section-hashing-encryption,Top of Section>>
+
 
 == Takeaways
 
@@ -355,6 +362,7 @@ Now both share the same secret S, without having sent it directly.
 - However, asymmetric encryption is much slower.
 - In practice, both methods are often combined for secure and efficient communication.
 
+<<section-hashing-encryption,Top of Section>>
 
 == Read more
 
@@ -362,3 +370,7 @@ Now both share the same secret S, without having sent it directly.
 - https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
 - https://cryptotools.net/rsagen
 - https://polkadot-blockchain-academy.github.io/pba-content/singapore-2024/syllabus/1-Cryptography/4-Encryption-slides.html#/9
+
+<<section-hashing-encryption,Top of Section>>
+
+<<top,Back to Top>>

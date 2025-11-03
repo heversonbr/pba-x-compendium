@@ -1,10 +1,9 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
+[[section-keys]]
 = Cryptographic keys
-
 
 == Encoding
 
@@ -46,8 +45,9 @@ Why Encoding Matters
 - Error reduction: Base58 specifically avoids characters that are commonly misread.
 - Data integrity: Encoded strings can still be verified cryptographically even if they are human-friendly.
 
+<<section-keys,Top of Section>>
 
-==  Mnemonics
+== Mnemonics
 
 The BIP-39 standard is a mnemonic system specifically designed for creating and recovering cryptographic keys in a human-readable way.
 A mnemonic system helps people remember or record complex information more easily.
@@ -64,6 +64,7 @@ abandon ability able about above absent absorb abstract absurd abuse access acci
 
 Substrate uses the dictionary of the `BIP39` standard.
 
+<<section-keys,Top of Section>>
 
 == Address Format
 
@@ -81,6 +82,8 @@ SS58 Address format is designed keeping the multichain nature of Polkadot in min
 You can use https://polkadot.subscan.io/tools/format_transform[format-transform] tool to check the account address on the other chains in the Polkadot ecosystem.
 There has been a significant debate within Polkadot ecosystem to unify the address format across chains.
 You can see the discussion https://forum.polkadot.network/t/unifying-polkadot-ecosystem-address-format/10042[here].
+
+<<section-keys,Top of Section>>
 
 == Account Derivation Methods
 
@@ -142,11 +145,19 @@ There are two types of key derivation: Hard and Soft keys deivation.
 - Cold Storage Setups: Cold wallets for long-term storage. ensures that even if a receiving address private key is accidentally exposed, the whole wallet seed and other accounts are still safe.
 - Multi-Signature Wallets (Partially Hardened): Wallets where multiple parties must sign transactions, ensure that shared public keys don’t leak sensitive structure or parent keys.
 
+<<section-keys,Top of Section>>
 
-== Activity: A practical example of hard and soft key derivation 
+== Practical Activity
+
+*A practical example of hard and soft key derivation*
 
 An example and activity, we use Polkadot JS Extension as it provides ability to create and derive accounts using a mnemonic phrase.
 Note: https://polkadot.js.org/extension/[Polkadot JS Extension] is for developers only. 
 If you are a developer and would like to explore the Polkadot account generation process, check the `Subkey` tool. 
 
 The article mentioned in the video:  "How likely is it that someone could guess your Bitcoin private key?"
+
+
+<<section-keys,Top of Section>>
+
+<<top,Back to Top>>

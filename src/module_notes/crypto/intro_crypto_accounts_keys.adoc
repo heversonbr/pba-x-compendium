@@ -1,9 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
-
+[[section-accounts-keys]]
 = Accounts and Keys
 
 include::intro_crypto_accounts.adoc[leveloffset=+1]

@@ -1,8 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
+[[section-digital-signatures]]
 = Digital Signatures
 
 == Properties
@@ -32,6 +32,7 @@ Other properties of signatures:
 ** The signed message remains readable by everyone.
 ** The purpose is to verify authenticity, not to conceal content.
 
+<<section-digital-signatures,Top of Section>>
 
 == Digital Signatures in Practice
 
@@ -56,11 +57,13 @@ includes any data that defines the environment or circumstances of a transaction
 Examples: session ID, timestamp, sender ID, location, protocol version, etc.
 For instance, we can bind signatures to specific sessions, so they cannot be reused in a different context.
 
+<<section-digital-signatures,Top of Section>>
 
 == Digital Signatures in Action
 
 This section just shows a video of presenting a transaction being sent from user A to B, the highlight of this example is to show the incremental nonce added to the transaction by the wallet as well as the timestamp that defined the lifetime that is added by the call. Both are measure of preventing replay attacks.
 
+<<section-digital-signatures,Top of Section>>
 
 == Digital Signatures: Elliptic curves
 
@@ -97,8 +100,9 @@ Usage: Common in Bitcoin, Ethereum, TLS, and many cryptographic protocols.
 * Larger Signature Size Compared to Ed25519:
 ** While smaller than RSA, ECDSA signatures are typically larger and slower to verify than Ed25519, which has become a more preferred standard in modern cryptography.
 
+<<section-digital-signatures,Top of Section>>
 
-=== Ed25519 (Edwards-curve Digital Signature Algorithm)
+=== Ed25519 (Edwards-Curve Digital Signature Algorithm)
 
 Ed25519 is a high-performance, modern digital signature algorithm that implements the Edwards-curve Digital Signature Algorithm using the Edwards curve Ed25519.
 
@@ -119,6 +123,7 @@ Limitations of Ed25519:
 ** ECDSA can be more easily adapted to schemes like threshold signatures or certain multi-signature protocols.
 ** Ed25519 requires additional construction (like MuSig2 or other schemes) for efficient multi-signature set	
 
+<<section-digital-signatures,Top of Section>>
 
 === Sr25519 (Schnorrkel/Ristretto x25519):
 
@@ -214,7 +219,7 @@ Limitations of Sr25519
 
 |===
 
-
+<<section-digital-signatures,Top of Section>>
 
 == Multi-Signatures
 
@@ -275,7 +280,9 @@ But there are some multi-sig schemes that preserv the anonimity of the signers. 
 ** The contract publicly records which keys are authorized and which keys signed each transaction.
 ** Low to medium anonymity – signer identities and approval history are usually on-chain.
 
-=== Quick comparation table
+<<section-digital-signatures,Top of Section>>
+
+=== Quick Comparation Table
 
 [cols="1,1,1,1,1", options="header"]
 |===
@@ -307,6 +314,7 @@ But there are some multi-sig schemes that preserv the anonimity of the signers. 
 
 |===
 
+<<section-digital-signatures,Top of Section>>
 
 *Tools and Protocols*:
 
@@ -324,6 +332,7 @@ But there are some multi-sig schemes that preserv the anonimity of the signers. 
 ** TSS (Threshold Signature Schemes): Used in Fireblocks, ZenGo, and other wallet infrastructures for keyless multi-party signatures.
 ** MuSig2 (Bitcoin, Schnorr-based): Efficient, private, and scalable multi-sig protocol.
 
+<<section-digital-signatures,Top of Section>>
 
 == Multi-Signature Accounts in Action
 
@@ -347,7 +356,6 @@ The example shows the use of the multi-sig using Passeo testnet , to simulate th
 - https://polkadot-blockchain-academy.github.io/pba-content/singapore-2024/syllabus/1-Cryptography/6-Advanced_Signatures-slides.html#/4
 
 
+<<section-digital-signatures,Top of Section>>
 
-
-
-	
+<<top,Back to Top>>

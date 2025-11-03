@@ -1,8 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
+[[section-intro-game-theory]]
 = Introduction to Game Theory
 
 == Overview
@@ -31,6 +31,7 @@ It also plays a role in psychology, sociology, and even environmental studies, h
 
 Its versatility makes it a key tool for analyzing strategic interactions in almost any discipline.
 
+<<section-intro-game-theory,Top of Section>>
 
 == Game theory and Blockchains
 
@@ -45,6 +46,7 @@ People may refer to incentives or economic policies as game theory, but
 they are not always backed by true game theorectical analysis.
 It is important to recognize when people use the term formally or loosely.
 
+<<section-intro-game-theory,Top of Section>>
 
 == Key concepts
 
@@ -76,8 +78,9 @@ while the Cournot Equilibrium is a specific type of Nash Equilibrium where compe
 
 -  https://blockandcapital.com/en/game-theory-impact-on-blockchain-technology/
 
+<<section-intro-game-theory,Top of Section>>
 
-== Game theory in Action
+== Game Theory In Action
 
 The Prisoner's Dilemma Example
 
@@ -122,6 +125,7 @@ This leads to both likely betraying each other, which is worse than mutual silen
 - Why self interest can harm groups
 - The core of many real life social dilemmas: negotiations, trade agreements, political alliances, teamwork in organizations
 
+<<section-intro-game-theory,Top of Section>>
 
 == Introduction to Nash Equilibrium
 
@@ -251,7 +255,7 @@ Each can go to either:
 - Sometimes, one equilibrium is *more efficient* (Pareto superior), but without communication, players might settle on less optimal conventions.
 - *Focal points* (natural, obvious choices) often guide coordination when multiple equilibria exist.
 
-== Schelling Points: Quick Explanation
+== Schelling Points: quick explanation
 
 A *Schelling Point* (also called a *Focal Point*) is a solution or course of action that people naturally converge on *without prior communication*.
 
@@ -297,8 +301,9 @@ Grand Central Station becomes the *Schelling Point* because:
 
 Schelling point is also referred to as a focal point in Game Theory.
 
+<<section-intro-game-theory,Top of Section>>
 
-== Public goods vs. common goods
+== Public Goods vs Common Goods
 
 *Public Goods* and *Common Goods* are both key concepts in economics, but they differ in terms of access, usage, and sustainability.
 
@@ -363,8 +368,9 @@ Schelling point is also referred to as a focal point in Game Theory.
 - Public Goods problems are modeled using *Public Goods Games*, which analyze voluntary contribution and free-riding.
 - Common Goods are often linked to *the Tragedy of the Commons*, which is a multi-player coordination failure where individual incentives lead to group harm.
 
+<<section-intro-game-theory,Top of Section>>
 
-== The tragedy of the commons
+== The Tragedy Of The Commons
 
 The *Tragedy of the Commons* describes a situation where individuals, acting in their own self-interest, overuse and deplete a shared, limited resource, leading to long-term collective loss.
 
@@ -407,3 +413,7 @@ It is a type of *social dilemma* involving *common goods* that are rivalrous and
 - Common Goods: Rivalrous and non-excludable resources subject to the tragedy.
 - Coordination Games: Potential frameworks for cooperation.
 
+
+<<section-intro-game-theory,Top of Section>>
+
+<<top,Back to Top>>

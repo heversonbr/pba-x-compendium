@@ -1,7 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[section-hashed-data-structures]]
 = Hash based Data Structures
 
 == Data Structures for beginers
@@ -24,6 +25,7 @@ A binary tree where left children are smaller than their parent and right childr
 Each data structure offers distinct advantages and trade-offs depending on the use case. 
 Blockchains benefit from organizing data in specific structures that leverage cryptographic hashing for security and integrity guarantees.
 
+<<section-hashed-data-structures,Top of Section>>
 
 == Hash Chains
 
@@ -51,6 +53,7 @@ This creates an immutable sequence where:
 
 Hash chains form the backbone of blockchain technology, ensuring data integrity and creating an auditable history of transactions.
 
+<<section-hashed-data-structures,Top of Section>>
 
 == Merkle Trees
 
@@ -98,13 +101,14 @@ To prove transaction B exists:
 
 This proof requires only 3 hash values instead of the full dataset.
 
+<<section-hashed-data-structures,Top of Section>>
 
 == Efficient Data Structures
 
 === Key-Value Databases
 Key-value databases store data as pairs of unique keys and their corresponding values. They provide efficient lookups, insertions, and deletions based on keys, making them ideal for scenarios requiring fast data retrieval by identifier.
 
-=== Trie (Prefix Tree)
+=== Trie (prefix tree)
 A trie is a tree structure where each path from root to leaf represents a string, with each node representing a character. Tries excel at prefix-based searches and string operations, commonly used in autocomplete systems and dictionaries.
 
 === Radix Trie
@@ -146,6 +150,8 @@ MMRs maintain a forest of perfect binary trees of different heights:
 
 MMRs are particularly valuable for blockchain systems requiring continuous data append operations while maintaining efficient proof capabilities.
 
+<<section-hashed-data-structures,Top of Section>>
+
 == Takeaways
 
 Hash-based data structures provide the cryptographic foundation for secure, distributed systems like blockchains:
@@ -165,3 +171,6 @@ Understanding these primitives is essential for blockchain development, as they 
 - https://polkadot-blockchain-academy.github.io/pba-content/singapore-2024/syllabus/1-Cryptography/7-Hash_Based_Data_Structures-slides.html#/1
 
 
+<<section-hashed-data-structures,Top of Section>>
+
+<<top,Back to Top>>

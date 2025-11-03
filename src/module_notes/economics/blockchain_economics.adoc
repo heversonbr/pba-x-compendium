@@ -1,7 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[blockchain-economics]]
 = Economics Aspects of Blockchains
 
 This section examines how the economic concepts described earlier apply to blockchain systems.
@@ -12,6 +13,7 @@ At its core, a market is a system where individuals, institutions, or automated 
 Each blockchain operates its own distinct market, often exhibiting behaviors that differ from traditional markets.
 Nevertheless, the same fundamental economic principles remain applicable.
 
+<<blockchain-economics,Top of Section>>
 
 == Blockspace
 
@@ -27,10 +29,11 @@ The answer lies in the interplay between supply and demand, specifically in the 
 
 Consequently, any fluctuation in demand (whether seasonal trends, speculative activity, or network congestion) translates directly into price changes, with no supply-side buffer to moderate these swings. It's worth noting an important distinction: while additional miners don't expand blockspace availability, they do strengthen the network's security through increased computational power dedicated to validating transactions.
 
-
 Recent blockchain innovations, such as roll-ups and parachains, address a fundamental challenge: expanding blockspace capacity while preserving network security. These technologies aim to introduce greater elasticity into blockspace supply, enabling it to adapt more effectively to fluctuating demand. By achieving this balance, blockchain networks can accommodate growth without compromising the security guarantees that make them valuable in the first place.
 
-== Blockchain state
+<<blockchain-economics,Top of Section>>
+
+== Blockchain State
 
 State storage represents another constrained resource within blockchain networks. Ethereum provides an illustrative example of how this scarcity manifests. The Ethereum network operates through validators—nodes analogous to Bitcoin's miners—but with expanded functionality. Specifically, Ethereum enables developers to deploy smart contracts, which are self-executing programs that significantly enhance the network's capabilities beyond simple transactions.
 
@@ -42,7 +45,9 @@ Ethereum implements a variation of this approach through a deposit-refund system
 
 This mechanism creates a financial incentive structure that naturally leads us to our next topic: opportunity costs in blockchain systems.
 
-=== Opportunuty costs
+<<blockchain-economics,Top of Section>>
+
+=== Opportunuty Costs
 
 Opportunity cost represents the value of the next best alternative forgone when making a decision. In economic terms, every choice involves sacrificing potential benefits from unchosen options.
 
@@ -52,9 +57,9 @@ Staking presents another clear illustration of opportunity costs in action. When
 
 These examples demonstrate how blockchain participants constantly navigate trade-offs, where resource allocation decisions carry implicit costs in the form of unrealized alternatives.
 
-== Network effects
+<<blockchain-economics,Top of Section>>
 
-*Network Effects*
+== Network Effects
 
 A network effect occurs when a product or service becomes increasingly valuable as more users adopt it. The benefit any individual derives from participation grows proportionally with the size of the user base. This phenomenon manifests across diverse domains: telephone networks become more useful as more people can be reached, social media platforms gain value through larger communities, and financial exchanges offer better liquidity with more participants. Blockchain networks exhibit similar dynamics.
 
@@ -62,7 +67,7 @@ In traditional business contexts, companies leverage network effects to establis
 
 Blockchain networks like Ethereum and Polkadot present a fundamentally different model. As public infrastructure, these networks distribute the benefits of network effects across all participants rather than concentrating them within a single corporate entity. Unlike Web2 platforms where applications operate within proprietary ecosystems controlled by individual companies, blockchain-based applications can be developed and deployed by anyone. This open architecture creates a multi-sided network effect: as more users join, developers find larger audiences for their applications; as more developers build, users gain access to richer functionality; and as both groups grow, validators benefit from increased transaction activity and token demand. These reinforcing dynamics generate compounding value that accrues to the entire ecosystem rather than a single gatekeeper.
  
-//TODO: add the economics of polkadot here ?
+<<blockchain-economics,Top of Section>>
 
 == Takeaways
 
@@ -78,10 +83,17 @@ This section has explored how fundamental economic principles operate within blo
 
 Together, these economic dynamics shape how blockchain networks evolve, who participates, and how value flows through decentralized systems.
 
-== References:
+<<blockchain-economics,Top of Section>>
+
+== References
 
 - https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/
 
 - https://polkadot-blockchain-academy.github.io/pba-content/singapore-2024/syllabus/2-Economics/4-Economics_of_Polkadot-slides.html#/21/0/2
 
 - https://online.hbs.edu/blog/post/what-are-network-effects
+
+
+<<blockchain-economics,Top of Section>>
+
+<<top,Back to Top>>

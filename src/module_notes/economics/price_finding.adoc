@@ -1,7 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[section-price-find]]
 = Price Finding mechanisms
 
 == Introductions
@@ -35,19 +36,17 @@ These ideas should work only for markets with perfect competition (not for monop
 - Supply and Demand Interactions: In perfectly competitive markets, prices naturally adjust based on the forces of supply and demand.
 - Government Intervention: Sometimes prices are regulated or set by authorities (e.g., minimum wage, price ceilings, or subsidies).
 
+<<section-price-find,Top of Section>>
 
-== Pricing posting: a basic model
-
+== Pricing Posting: A Basic Model
 
 === Example: A Simple Price Finding Model
 
-
-Scenario:
+*Scenario*:
 
 - Seller (Selena): Wants to sell one item.
 - Buyers (Alice and Bob): Each has a private (secret) valuation of how much the item is worth to them.
 - Key Assumption: The buyers' valuations are independently drawn from a known probability distribution (between 0 and 1), but their actual values are unknown to Selena.
-
 
 ==== Price Posting Mechanism
 
@@ -104,13 +103,14 @@ Optimal Price: When you solve this optimization problem (by taking the derivativ
 | Not directly related here, but important to contrast with free market mechanisms like the one modeled. If Selena had to follow a regulated price, her profit-maximization strategy would be constrained.
 |===
 
-
-=== Take-aways
+=== Takeaways
 
 - This example shows how sellers make decisions under uncertainty.
 - Provides a simple but powerful model for understanding price setting.
 - Highlights why more advanced mechanisms (like auctions) may be more effective.
 - Builds intuition that scales up to more complex market scenarios.
+
+<<section-price-find,Top of Section>>
 
 == Auction mechanisms
 
@@ -124,8 +124,8 @@ All bids are submitted simultaneously and privately. Bidders cannot see or respo
 
 *Common Formats:*
 
-* First-Price Auction:  
-  The highest bidder wins and pays their own bid.
+* First-Price Auction: 
+** The highest bidder wins and pays their own bid.
 * Second-Price Auction (Vickrey Auction): 
 ** The highest bidder wins but pays the second-highest bid.  
 ** This format encourages bidders to bid truthfully (bidding your true valuation is the dominant strategy).
@@ -148,7 +148,7 @@ Bids are made *sequentially and publicly*. Bidders can observe others' bids and 
 **  Price drops until someone accepts.  
 **  Common in flower markets and IPOs.
 
-==== Main Difference: Static vs. Dynamic
+==== Main Difference: static vs dynamic
 
 [cols="1,1,1", options="header"]
 |===
@@ -178,11 +178,14 @@ The minimum acceptable price set by the seller. If no bidder meets the reserve p
 ** Online advertising (Google, Facebook)
 ** IPO pricing (Dutch auctions)
 
+<<section-price-find,Top of Section>>
+
 == Revenue Equivalence
 
 Revenue equivalence is a concept in auction theory that states that given certain conditions, any mechanism that results in the same outcomes 
 (i.e. allocates items to the same bidders) also has the same expected revenue. This is one of the most important results in auction theory.
 
+<<section-price-find,Top of Section>>
 
 == Summary
 - Auctions are a powerful tool for price finding, specially in markets where there are few buyers and sellers or the value of the good is incertain.
@@ -196,7 +199,13 @@ Revenue equivalence is a concept in auction theory that states that given certai
 // Frontrunning in the context of auctions refers to:
 // A situation where an insider uses privileged information to place bids before the auction, gaining an unfair advantage.
 
+<<section-price-find,Top of Section>>
+
 == References
 
 - https://blogs.cornell.edu/info2040/2021/11/29/four-common-types-of-auctions/
 - https://en.wikipedia.org/wiki/Revenue_equivalence
+
+<<section-price-find,Top of Section>>
+
+<<top,Back to Top>>

@@ -1,8 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
+[[section-cryto-topics]]
 = Advanced Cryptography Topics
 
 == Advanced Cryptography Primitives
@@ -14,7 +14,7 @@ One inconvenient side of using multi-sig for this purpose is that we have to man
 There is another technique that helps us to preserve a single private key across multiple locations to avoid loss and failures.
 That is Shamir secret sharing. 
 
-=== Shamir secret sharing
+=== Shamir Secret Sharing
 
 Shamir’s Secret Sharing (SSS) is a cryptographic method invented by Adi Shamir in 1979.
 It allows a secret (like a password or cryptographic key) to be split into multiple parts (shares).
@@ -47,7 +47,7 @@ It is based on polynomial interpolation over finite fields:
 - Secure Multi-Party Agreements: Joint authorization requirements.
 
 
-==== Quick comparison table: SSS vs Multi-sig
+==== Quick Comparison Table SSS vs Multi-Sig
 
 [cols="1,1,1", options="header"]
 |===
@@ -75,7 +75,9 @@ It is based on polynomial interpolation over finite fields:
  
 |===
 
-== On-chain randomness - VRFs
+<<section-cryto-topics,Top of Section>>
+
+== On-Chain Randomness - VRFs
 
 Another interesting technique used in blockchains is VRF that is used to obtain private randomness, that is publicly verifiable.
 
@@ -154,6 +156,7 @@ Players want to draw cards randomly and fairly without trusting each other or a 
 * The proof is verifiable using A’s public key and the shared input x.
 * Players can check the card without knowing A’s secret key.
 
+<<section-cryto-topics,Top of Section>>
 
 === VRF Types
 
@@ -184,6 +187,7 @@ A Ring VRF lets a participant generate a VRF output that is provably valid but a
 - Verifiability: Others can still verify the result came from a valid group member.
 - Useful in privacy-preserving protocols, anonymous lotteries, or leader selection.
 
+<<section-cryto-topics,Top of Section>>
 
 === Takeaways
 
@@ -198,3 +202,6 @@ A Ring VRF lets a participant generate a VRF output that is provably valid but a
 - https://docs.polkadot.com/polkadot-protocol/basics/randomness/#vrf
 - https://eprint.iacr.org/2023/002.pdf
 
+<<section-cryto-topics,Top of Section>>
+
+<<top,Back to Top>>

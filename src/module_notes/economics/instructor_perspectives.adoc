@@ -1,7 +1,8 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[instruct-perspectives-economics]]
 = Instructors Perspectives
 
 This section shares some thoughts from the instructor's point of view, as presented in the end of the module. 
@@ -12,6 +13,7 @@ This section shares some thoughts from the instructor's point of view, as presen
 
 Behavioral economics combines psychology with economic theory to explain how real people make decisions — not just how perfectly rational actors *should* behave. These insights directly apply to real-world choices and everyday behavior.
 
+<<instruct-perspectives-economics,Top of Section>>
 
 == Web3 Developers and Economics Knowledge
 
@@ -27,15 +29,17 @@ Understanding economics enables developers to:
 
 Economics knowledge gives Web3 developers a strong advantage in both system design and participation.
 
+<<instruct-perspectives-economics,Top of Section>>
 
 == Schelling Points and Predictability of Choices
 
 Schelling points highlight how psychology influences our decisions. A Schelling point is a solution that people naturally gravitate toward without communication, because it feels intuitive, obvious, or fair to most participants.
 
+<<instruct-perspectives-economics,Top of Section>>
 
 == Tragedy of the Commons
 
-=== How does it impact public blockchain design?
+=== How Does It Impact Public Blockchain Design
 
 The *Tragedy of the Commons* describes situations where individuals, acting in their own self-interest, overuse or under-maintain a shared resource, harming the entire group in the long run.
 
@@ -74,8 +78,14 @@ This ensures essential public goods continue to be funded even if individual act
 
 By embedding incentives at the protocol level, blockchains can sustainably develop public goods and avoid the Tragedy of the Commons.
 
+<<instruct-perspectives-economics,Top of Section>>
+
 == Takeaways
 
 - The Tragedy of the Commons is a central consideration in public blockchain design. Without proper incentives, essential public goods are underfunded.
 
 - Protocol-level systems, such as on-chain treasuries and inflation-funded grants, help ensure sustainable growth, resilience, and innovation in open blockchain ecosystems, even when individual users may prefer to free-ride.
+
+<<instruct-perspectives-economics,Top of Section>>
+
+<<top,Back to Top>>

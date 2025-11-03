@@ -1,3 +1,4 @@
+[[top-doc]]
 = PBA-x Compendium
 :doctype: book
 :toc: left
@@ -16,7 +17,6 @@ The primary goal of this document is to transform raw notes from video lessons i
 
 
 NOTE: [WIP] This is a Work In Progress, any constructive feedback is welcome.
-
 
 include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
 

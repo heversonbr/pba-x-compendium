@@ -1,10 +1,11 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
+[[section-principles]]
 = Cryptography Principles
 
-== Cryptography overview
+== Cryptography Overview
 
 In the past, the design of cryptographic protocols was largely based on heuristics, relying on intuition and ad hoc methods. This approach often led to systems that appeared secure but were later found to contain vulnerabilities when subjected to rigorous analysis.
 
@@ -27,7 +28,9 @@ Cryptography provides a comprehensive collection of tools for secure interaction
 
 These cryptographic primitives serve as building blocks for more complex systems, including the blockchain technologies which we will explore throughout this course.
 
-== Secure communication
+<<section-principles,Top of Section>>
+
+== Secure Communication
 
 Secure communication forms the foundation of all cryptographic systems. When two or more parties wish to communicate over an insecure channel (such as the internet), they face several fundamental challenges:
 
@@ -82,7 +85,7 @@ In the context of blockchain systems, secure communication principles ensure tha
 - Private information remains confidential when necessary
 
 
-=== Secure Communication: A Practical Example
+=== Secure Communication: a practical example
 
 
 Consider the fundamental problem: How can `Alice` send a secure message to `Bob` when their communication channel (cc) is inherently insecure?
@@ -91,7 +94,7 @@ Consider the fundamental problem: How can `Alice` send a secure message to `Bob`
 `A`  ------cc----->  `B`
 
 
-==== Scenario 1: Pre-shared Keys
+==== Scenario 1: Pre-Shared Keys
 
 In the first scenario, `Alice` and `Bob` know each other and can meet in person to exchange identical keys for a specific lock.
 The process works as follows:
@@ -120,7 +123,9 @@ This example demonstrates the fundamental concepts of cryptographic key exchange
 
 NOTE: This physical analogy illustrates the mathematical principles behind public key cryptography and key exchange protocols like Diffie-Hellman. In practice, the "locks" are mathematical operations that are easy to perform in one direction but computationally infeasible to reverse without the proper key.
 
-== Kefckhoff's Principle:
+<<section-principles,Top of Section>>
+
+== Kefckhoff's Principle
 
 Formulated by Auguste Kerckhoffs in the 19th century, the principle states that the security of a cryptographic system should not depend on the secrecy of the algorithm. It should rely only on the secrecy of the key. A system must remain secure even if the algorithm is publicly known.
 
@@ -146,9 +151,15 @@ Therefore, security depends on strong, unpredictable keys, not hidden algorithms
 Keys must be chosen from high-entropy distribution, more randomness means higher entropy, reducing the chance of adversaries guessing or deriving the key.
 Rigorous testing of public algorithms ensures robust, trustworthy systems.
 
+
+<<section-principles,Top of Section>>
+
 == Takeaways
 
 - Cryptography is a fundamental science for building secure, complex, decentralized systems.
 - Designing such systems requires balancing strong security guarantees with minimal assumptions and high performance—a critical trade-off.
 - A solid understanding of basic cryptographic primitives is essential to achieving this balance.
 
+<<section-principles,Top of Section>>
+
+<<top,Back to Top>>

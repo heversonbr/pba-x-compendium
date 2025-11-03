@@ -1,10 +1,9 @@
 :doctype: book
-:toc:
+:toc: left
 :toclevels: 3
 
-
+[[section-economic-intro]]
 = Introdution to Economics
-
 
 == Crypotography and Economics
 
@@ -33,7 +32,7 @@ Economic concepts are also useful in our personal life. Knowing how human behave
 do not behave optimally, can guide us to make better decisions. It can help us all the way from
 playing a game to designing a game, or even to starting a game company.
 
-*Take-away*:
+*Takeaways*:
 
 - Cryptography and mathematics offer reliable, predictable guarantees about system behavior.
 - Human behavior is less predictable and can undermine purely technical solutions.
@@ -50,11 +49,11 @@ In the following we will discuss:
 - Different market forms: monopolies, oligopolies an perfect competition.
 - Economics of specialization: focused on comparative advantages and opportunity costs, which shows why specialization benefits everyone.
 
+<<section-economic-intro,Top of Section>>
 
-== Can Incentives go wrong ?
+== Can Incentives Go Wrong?
 
 === Incentives
-
 
 [quote, Stephen Levitt]
 ----
@@ -83,7 +82,7 @@ Therefore, we need to make suke that incentives and goals are well aligned.
 If people focues on the incentive they tend to forget the goal behind it. 
 
 
-*Take-away*:
+*Takeaways*:
 
 - Incentives shape behavior: People respond to incentives, consciously or unconsciously, adjusting their actions based on the rewards or penalties offered.
 - Types of incentives matter: Incentives can be financial, social, moral, or coercive. Not all are about money.
@@ -94,6 +93,7 @@ If people focues on the incentive they tend to forget the goal behind it.
 - Unintended consequences are common: When designing incentives, it is essential to predict possible side effects or alternative behaviors that could emerge.
 - Review and adjust: Effective incentive systems should be monitored regularly to ensure they continue to work as intended.
 
+<<section-economic-intro,Top of Section>>
 
 == Rationality and Biases
 
@@ -130,8 +130,7 @@ pre-selected choices.
 So, incentives and punishments can be tricky, we have to design incentives thoughtfully and stand in the shoes of the user.
 This is specially important in blockchain systems where we rely heavily on behavior. 
 
-
-*Take-Away*: Key Points on Rationality and Cognitive Biases
+*Takeaways*: Key Points on Rationality and Cognitive Biases
 
 - Traditional economics assumes rationality: People are expected to make decisions that maximize their own monetary gains using available information.
 - Reality is more complex: People are not purely driven by money — they also care about fairness, social norms, personal beliefs, and emotional factors.
@@ -143,9 +142,9 @@ This is specially important in blockchain systems where we rely heavily on behav
 - Design matters: Incentives and penalties must account for human behavior and cognitive biases.
 This is especially critical in blockchain systems, where behavioral incentives are central to system security and participation.
 
+<<section-economic-intro,Top of Section>>
 
-
-== Supply and demand
+== Supply And Demand
 
 Supply and demand are fundamental pilars of market equilibrium.
 Generally, when price go up, demand falls, that's called the law of demand.
@@ -168,8 +167,7 @@ significantly the demand or supply is not affected.
 An axemple of low elasticity are basic necessities goods like water, salt or gasoline,
 even if the price goes up, people still need to pay for it.
 
-
-*Take-Away*: Key Points on Supply and Demand
+*Takeaways*: Key Points on Supply and Demand
 
 - Supply and demand are core to market behavior: They determine prices and quantities in a market.
 - Law of Demand: When prices rise, demand typically falls. Higher prices usually lead to less buying.
@@ -181,7 +179,9 @@ even if the price goes up, people still need to pay for it.
 - Low elasticity: Demand or supply stays stable even with significant price changes (e.g. gasoline, water, salt).
 - Key insight: Understanding elasticity helps predict how markets will react to pricing strategies, taxes, or supply shocks.
 
-== Market structures and strategies
+<<section-economic-intro,Top of Section>>
+
+== Market Structures And Strategies
 
 - Perfect competition: the ideal situation where there are a lot of buyers of a product and a lot of firms selling it, with no single producers providing
 to a large portion of the total supply. No single party can exert a large control over either the supply or the demand.
@@ -201,7 +201,7 @@ Hence, taking that into account in a society of specialist, if people focus on t
 comparative advantage, everyone will be wealthier than in a society without trading.
 This principle can be applied to country-level specialization on a global scale.
 
-*Take-Away*: Key Points on Market Types and Economic Strategies
+*Takeaways*: Key Points on Market Types and Economic Strategies
 
 * Perfect Competition:
 ** Many buyers and many sellers.
@@ -224,3 +224,8 @@ This principle can be applied to country-level specialization on a global scale.
 
 *Final Note*:
 Understanding incentives and core economic principles is essential for designing better systems—whether they involve human-to-human interactions or automated processes.
+
+
+<<section-economic-intro,Top of Section>>
+
+<<top,Back to Top>>
