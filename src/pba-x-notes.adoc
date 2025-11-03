@@ -15,12 +15,12 @@ This document contains comprehensive notes from the *3rd wave* of the *PBA-x* th
 The primary goal of this document is to transform raw notes from video lessons into well-structured, readable content that can serve as a definitive reference guide for learners to refer to and review the full course material.
 
 
-NOTE: *WIP*
+NOTE: [WIP] This is a Work In Progress, any constructive feedback is welcome.
 
 
 include::module_notes/introduction_cryptography.adoc[leveloffset=+1]
 
-// include::module_notes/economics_game_theory.adoc[leveloffset=+1]
+include::module_notes/economics_game_theory.adoc[leveloffset=+1]
 
 // include::module_notes/fundamentals_blockchains.adoc[leveloffset=+1]
 
